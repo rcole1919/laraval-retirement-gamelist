@@ -1,0 +1,494 @@
+.castle {
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../../images/castle-unbird.png');
+    background-position: center top -250px;
+    background-repeat: no-repeat;
+
+    &__logo {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        opacity: 0;
+        animation: logo 4s;
+        animation-fill-mode: forwards;
+    }
+
+    &__auth {
+        width: 408px;
+        border: 6px solid var(--gb2);
+        padding: 20px;
+        background-color: var(--gb1);
+    }
+
+    &__button {
+        position: absolute;
+        top: 711px;
+        left: 50%;
+        z-index: 3;
+        transform: translateX(-50%);
+        width: 306px;
+        height: 96px;
+        border: 6px solid var(--gb4);
+        background-color: var(--gb1);
+        font-size: 40px;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+
+            position: absolute;
+            left: 50%;
+            bottom: -24px;
+            transform: translateX(-50%);
+            width: calc(100% + 12px);
+            height: 18px;
+            background-image: url('../../images/under-start.png');
+            background-repeat: no-repeat;
+        }
+
+        &:hover {
+            background-color: var(--gb4);
+            color: var(--gb1);
+        }
+
+        &:active {
+            color: var(--gb2);
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &:focus-visible {
+            background-color: var(--gb4);
+            color: var(--gb1);
+        }
+    }
+}
+
+.bird {
+    position: absolute;
+    left: 50%;
+    background-repeat: no-repeat;
+
+    &-big {
+        width: 66px;
+        height: 30px;
+    }
+
+    &-big.bird-one.bird-normal,
+    &-big.bird-two.bird-up {
+        background-image: url('../../images/birds/bird1.svg');
+    }
+
+    &-big.bird-one.bird-up,
+    &-big.bird-two.bird-normal {
+        background-image: url('../../images/birds/bird1-up.svg');
+    }
+
+    &-small {
+        width: 42px;
+        height: 24px;
+    }
+
+    &-small.bird-three.bird-up,
+    &-small.bird-five.bird-up,
+    &-small.bird-four.bird-normal,
+    &-small.bird-six.bird-normal {
+        background-image: url('../../images/birds/bird2-up.svg');
+    }
+
+    &-small.bird-three.bird-normal,
+    &-small.bird-five.bird-normal,
+    &-small.bird-four.bird-up,
+    &-small.bird-six.bird-up {
+        background-image: url('../../images/birds/bird2.svg');
+    }
+
+    &-one {
+        top: 34px;
+        transform: translateX(-708px);
+    }
+
+    &-two {
+        top: 258px;
+        transform: translateX(676px);
+    }
+
+    &-three {
+        top: 82px;
+        transform: translateX(-642px);
+    }
+
+    &-four {
+        top: 94px;
+        transform: translateX(-720px);
+    }
+
+    &-five {
+        top: 318px;
+        transform: translateX(664px);
+    }
+
+    &-six {
+        top: 306px;
+        transform: translateX(742px);
+    }
+
+    &-normal {
+        opacity: 0;
+        animation: bird-normal 2s;
+        animation-iteration-count: infinite;
+    }
+
+    &-up {
+        opacity: 1;
+        animation: bird-up 2s;
+        animation-iteration-count: infinite;
+    }
+}
+
+.flag {
+    position: absolute;
+    left: 50%;
+    top: 164px;
+    background-repeat: no-repeat;
+    width: 72px;
+    height: 48px;
+
+    &-left {
+        transform: translateX(-594px);
+    }
+
+    &-right {
+        transform: translateX(600px);
+    }
+
+    &-normal {
+        opacity: 0;
+        animation: bird-normal 2s;
+        animation-iteration-count: infinite;
+        background-image: url('../../images/birds/flag1.svg');
+    }
+
+    &-up {
+        opacity: 1;
+        animation: bird-up 2s;
+        animation-iteration-count: infinite;
+        background-image: url('../../images/birds/flag1-up.svg');
+    }
+}
+
+.sumo {
+    position: absolute;
+    top: 727px;
+    left: 50%;
+    z-index: 3;
+    transform: translateX(-258px);
+    width: 66px;
+    height: 80px;
+    background-repeat: no-repeat;
+
+    &-stand {
+        background-image: url('../../images/sumo/stand.svg');
+    }
+
+    &-walk-1 {
+        display: none;
+        opacity: 0;
+        animation: bird-normal 0.5s;
+        animation-iteration-count: infinite;
+        background-image: url('../../images/sumo/walk-1.svg');
+    }
+
+    &-walk-2 {
+        display: none;
+        opacity: 1;
+        animation: bird-up 0.5s;
+        animation-iteration-count: infinite;
+        background-image: url('../../images/sumo/walk-2.svg');
+    }
+}
+
+.castle__button:hover~.sumo-stand,
+.castle__button:focus-visible~.sumo-stand {
+    display: none;
+}
+
+.castle__button:hover~.sumo-walk-1,
+.castle__button:hover~.sumo-walk-2,
+.castle__button:focus-visible~.sumo-walk-1,
+.castle__button:focus-visible~.sumo-walk-2 {
+    display: block;
+}
+
+@keyframes bird-normal {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    51% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bird-up {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    51% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes logo {
+    0% {
+        opacity: 0;
+    }
+
+    24% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.1;
+    }
+
+    49% {
+        opacity: 0.1;
+    }
+
+    50% {
+        opacity: 0.25;
+    }
+
+    74% {
+        opacity: 0.25;
+    }
+
+    75% {
+        opacity: 0.5;
+    }
+
+    99% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.link {
+    position: absolute;
+    top: 700px;
+    left: 50%;
+    z-index: 2;
+    transform: translateX(4500px);
+    width: 64px;
+    height: 64px;
+    background-repeat: no-repeat;
+    background-image: url("../../images/link/link-1.svg");
+    animation: link-move 40s linear infinite, link-walk 0.3s linear infinite;
+}
+
+@keyframes link-move {
+    0% {
+        transform: translateX(4000px);
+    }
+
+    100% {
+        transform: translateX(-4000px);
+    }
+}
+
+@keyframes link-walk {
+    0% {
+        background-image: url("../../images/link/link-1.svg");
+    }
+
+    49% {
+        background-image: url("../../images/link/link-1.svg");
+    }
+
+    50% {
+        background-image: url("../../images/link/link-2.svg");
+    }
+
+    100% {
+        background-image: url("../../images/link/link-2.svg");
+    }
+}
+
+@media (max-width: 1600px) {
+    .castle {
+        background-image: url('../../images/castle-unbird-1600.png');
+        background-position: center top;
+
+        &__logo {
+        margin-bottom: 30px;
+
+        &-img {
+            width: 800px;
+            height: 45px;
+        }
+        }
+
+        &__button {
+        top: 470px;
+        }
+    }
+
+    .sumo {
+        top: 480px;
+    }
+
+    .link {
+        top: 460px;
+    }
+
+    .flag {
+        top: 15px;
+
+        &-left {
+        transform: translateX(-495px);
+        }
+
+        &-right {
+        transform: translateX(500px);
+        }
+    }
+
+    .bird {
+        &-one {
+        transform: translateX(-638px);
+        }
+
+        &-two {
+        top: 118px;
+        transform: translateX(574px);
+        }
+
+        &-three {
+        transform: translateX(-588px);
+        }
+
+        &-four {
+        transform: translateX(-658px);
+        }
+
+        &-five {
+        top: 168px;
+        transform: translateX(554px);
+        }
+
+        &-six {
+        top: 188px;
+        transform: translateX(624px);
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    .castle {
+        background-image: url('../../images/castle-unbird-1280.png');
+        background-position: center top -50px;
+
+        &__button {
+        top: 440px;
+        width: 250px;
+        height: 60px;
+        border: 4px solid var(--gb4);
+        font-size: 25px;
+
+        &::before {
+            display: none;
+        }
+        }
+
+        &__logo {
+        margin-bottom: 30px;
+
+        &-img {
+            width: 640px;
+            height: 36px;
+        }
+        }
+    }
+
+    .sumo {
+        top: 440px;
+    }
+
+    .link {
+        top: 430px;
+    }
+
+    .flag {
+        top: 72px;
+
+        &-left {
+            transform: translateX(-396px);
+        }
+
+        &-right {
+            transform: translateX(400px);
+        }
+
+        &-normal {
+            background-image: url('../../images/birds/flag1-1280.svg');
+        }
+
+        &-up {
+            background-image: url('../../images/birds/flag1-up-1280.svg');
+        }
+    }
+
+    .bird {
+        &-one {
+            transform: translateX(-558px);
+        }
+
+        &-two {
+            transform: translateX(494px);
+        }
+
+        &-three {
+            transform: translateX(-508px);
+        }
+
+        &-four {
+            transform: translateX(-578px);
+        }
+
+        &-five {
+            top: 168px;
+            transform: translateX(474px);
+        }
+
+        &-six {
+            top: 188px;
+            transform: translateX(544px);
+        }
+    }
+}

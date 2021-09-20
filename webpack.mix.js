@@ -10,8 +10,19 @@ const mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
+if ( ! mix.inProduction()) {
+    mix.webpackConfig({
+        devtool: 'inline-source-map'
+    })
+}
 
-mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]);
+mix
+    .copyDirectory('resources/fonts', 'public/fonts')
+    .copyDirectory('resources/images', 'public/images')
+    .postCss('resources/css/style.css', 'public/css', [
+        require('postcss-custom-properties'),
+        require('autoprefixer'),
+        require('postcss-nested'),
+        require('postcss-simple-vars')
+    ])
+    .version();

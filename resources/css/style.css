@@ -1,0 +1,42 @@
+@font-face {
+	font-family: 'AnotherCastle3';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("../fonts/AnotherCastle3.woff") format("woff"),
+		url("../fonts/AnotherCastle3.woff2") format("woff2");
+}
+
+:root {
+	--gb1: #FFFFFF;
+	--gb2: #C0C0C0;
+	--gb3: #808080;
+	--gb4: #000000;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+body {
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+}
+
+@import './title-page/index';
+@import './title-page/castle';
+@import './title-page/auth-form';
+@import './gamelist-simple/gamelist';
+

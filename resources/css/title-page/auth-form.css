@@ -1,0 +1,86 @@
+.auth-form {
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+        display: flex;
+        margin-bottom: 10px;
+
+        label {
+            width: 40%;
+            padding-right: 10px;
+            text-align: right;
+            line-height: 24px;
+        }
+
+        input {
+            width: 60%;
+            border: 2px solid var(--gb4);
+            padding-left: 5px;
+            padding-right: 5px;
+
+            &:focus,
+            &:hover {
+                outline: 1px solid var(--gb4);
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        button {
+            border: none;
+            padding: 0;
+            height: 24px;
+            background-color: var(--gb3);
+
+            color: var(--gb1);
+
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--gb4);
+            }
+
+            &:active {
+                color: var(--gb2);
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            &:focus-visible {
+                background-color: var(--gb4);
+            }
+        }
+    }
+
+    &__sign-in {
+        width: calc(40% - 10px);
+    }
+
+    &__reg {
+        width: 60%;
+    }
+
+    &__guest {
+        align-self: center;
+    }
+
+    &__link {
+        color: var(--gb3);
+
+        &:hover {
+            color: var(--gb4);
+        }
+
+        &:focus {
+            outline: none;
+            color: var(--gb4);
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.gl-body {
+	font-family: 'AnotherCastle3', 'Arial', sans-serif;
+	display: flex;
+	flex-direction: column;
+}
+
+.main-gl {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.gl-old {
+    tfoot {
+        text-align: center;
+    }
+}
