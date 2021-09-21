@@ -12,6 +12,7 @@
 
 .castle {
     position: relative;
+    overflow: hidden;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -82,6 +83,14 @@
             background-color: var(--gb4);
             color: var(--gb1);
         }
+
+    .castle__copyright {
+        position: absolute;
+        top: 860px;
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+    }
 
 .bird {
     position: absolute;
@@ -469,23 +478,27 @@
     }
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1599px) {
     .castle {
         background-image: url(/images/castle-unbird-1600.png?8fe8b6827ebcb60122cf8229c73dcbdf);
         background-position: center top;
     }
 
         .castle__logo {
-        margin-bottom: 30px;
+            margin-bottom: 30px;
         }
 
-        .castle__logo-img {
-            width: 800px;
-            height: 45px;
-        }
+            .castle__logo-img {
+                width: 800px;
+                height: 45px;
+            }
 
         .castle__button {
-        top: 470px;
+            top: 470px;
+        }
+
+        .castle__copyright {
+            top: 600px;
         }
 
     .sumo {
@@ -501,66 +514,70 @@
     }
 
         .flag-left {
-        transform: translateX(-495px);
+            transform: translateX(-495px);
         }
 
         .flag-right {
-        transform: translateX(500px);
+            transform: translateX(500px);
         }
         .bird-one {
-        transform: translateX(-638px);
+            transform: translateX(-638px);
         }
 
         .bird-two {
-        top: 118px;
-        transform: translateX(574px);
+            top: 118px;
+            transform: translateX(574px);
         }
 
         .bird-three {
-        transform: translateX(-588px);
+            transform: translateX(-588px);
         }
 
         .bird-four {
-        transform: translateX(-658px);
+            transform: translateX(-658px);
         }
 
         .bird-five {
-        top: 168px;
-        transform: translateX(554px);
+            top: 168px;
+            transform: translateX(554px);
         }
 
         .bird-six {
-        top: 188px;
-        transform: translateX(624px);
+            top: 188px;
+            transform: translateX(624px);
         }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
     .castle {
         background-image: url(/images/castle-unbird-1280.png?805a93173dc804303b2a711a4251789c);
         background-position: center top -50px;
     }
 
         .castle__button {
-        top: 440px;
-        width: 250px;
-        height: 60px;
-        border: 4px solid var(--gb4);
-        font-size: 25px;
+            top: 440px;
+            width: 250px;
+            height: 60px;
+            border: 4px solid var(--gb4);
+            font-size: 25px;
         }
 
-        .castle__button::before {
-            display: none;
+            .castle__button::before {
+                display: none;
+            }
+
+        .castle__copyright {
+            top: 540px;
         }
 
         .castle__logo {
-        margin-bottom: 30px;
+            margin-bottom: 30px;
         }
 
-        .castle__logo-img {
-            width: 640px;
-            height: 36px;
-        }
+            .castle__logo-img {
+                width: 640px;
+                height: 36px;
+            }
 
     .sumo {
         top: 440px;
@@ -614,6 +631,142 @@
             top: 188px;
             transform: translateX(544px);
         }
+}
+
+@media (max-width: 991px) {
+    .castle {
+        background-position: left top -50px;
+    }
+
+        .castle__logo {
+            margin-bottom: 80px;
+        }
+        .flag.flag-left {
+            transform: none;
+            left: 244px;
+        }
+
+        .flag.flag-right {
+            display: none;
+        }
+        .bird.bird-two,
+        .bird.bird-five,
+        .bird.bird-six {
+            display: none;
+        }
+
+        .bird.bird-one,
+        .bird.bird-three,
+        .bird.bird-four {
+            transform: none;
+        }
+
+        .bird.bird-one {
+            top: 80px;
+            left: 60px
+        }
+
+        .bird.bird-three {
+            top: 130px;
+            left: 110px
+        }
+
+        .bird.bird-four {
+            top: 160px;
+            left: 40px
+        }
+}
+
+@media (max-width: 767px) {
+    .castle {
+        background-image: url(/images/mountains.png?eb69d8feb020ff7d247d68191015479d);
+        background-position: center top 300px;
+        background-repeat: repeat-x;
+    }
+
+        .castle__logo {
+            margin-bottom: 40px;
+        }
+
+        .castle__logo-img {
+            width: 408px;
+            height: 23px;
+        }
+
+        .castle__copyright {
+            max-width: 400px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+    .flag {
+        display: none;
+    }
+
+    .sumo {
+        transform: translateX(-220px);
+    }
+
+    .link {
+        top: 400px;
+    }
+        .bird.bird-one {
+            display: none;
+        }
+
+        .bird.bird-three {
+            transform: translateX(220px);
+            top: 10px;
+            left: 50%;
+        }
+
+        .bird.bird-four {
+            transform: translateX(200px);
+            top: 50px;
+            left: 50%;
+        }
+}
+
+@media (max-width: 575px) {
+    .castle {
+        background-position: center top 345px;
+    }
+
+        .castle__logo-img {
+            width: 300px;
+            height: 64px;
+        }
+
+        .castle__logo {
+            margin-bottom: 20px;
+        }
+
+        .castle__auth {
+            width: 300px;
+        }
+
+        .castle__button {
+            top: 440px;
+        }
+
+        .castle__copyright {
+            top: 510px;
+        }
+
+    .bird {
+        display: none;
+    }
+
+    .sumo {
+        display: none;
+    }
+
+    .castle__button:hover~.sumo-walk-1,
+    .castle__button:hover~.sumo-walk-2,
+    .castle__button:focus-visible~.sumo-walk-1,
+    .castle__button:focus-visible~.sumo-walk-2 {
+        display: none;
+    }
 }
 
 .auth-form {
@@ -702,6 +855,34 @@
             outline: none;
             color: var(--gb4);
         }
+
+@media (max-width: 575px) {
+            .auth-form__item label {
+                display: none;
+            }
+
+            .auth-form__item input {
+                width: 100%;
+            }
+
+        .auth-form__buttons {
+            flex-direction: column;
+        }
+
+        .auth-form__sign-in {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .auth-form__reg {
+            width: 100%;
+        }
+
+        .auth-form__guest--forget {
+            margin-bottom: 7px;
+        }
+}
+
 .gl-body {
 	font-family: 'AnotherCastle3', 'Arial', sans-serif;
 	display: flex;
@@ -744,6 +925,7 @@ html {
 body {
 	min-height: 100vh;
 	overflow: hidden;
+    min-width: 320px;
 }
 
 .visually-hidden {

@@ -25,6 +25,7 @@ html {
 body {
 	min-height: 100vh;
 	overflow: hidden;
+    min-width: 320px;
 }
 
 .visually-hidden {

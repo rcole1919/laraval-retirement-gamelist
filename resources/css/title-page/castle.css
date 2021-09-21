@@ -1,5 +1,6 @@
 .castle {
     position: relative;
+    overflow: hidden;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -66,6 +67,14 @@
             background-color: var(--gb4);
             color: var(--gb1);
         }
+    }
+
+    &__copyright {
+        position: absolute;
+        top: 860px;
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
     }
 }
 
@@ -340,22 +349,26 @@
     }
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1599px) {
     .castle {
         background-image: url('../../images/castle-unbird-1600.png');
         background-position: center top;
 
         &__logo {
-        margin-bottom: 30px;
+            margin-bottom: 30px;
 
-        &-img {
-            width: 800px;
-            height: 45px;
-        }
+            &-img {
+                width: 800px;
+                height: 45px;
+            }
         }
 
         &__button {
-        top: 470px;
+            top: 470px;
+        }
+
+        &__copyright {
+            top: 600px;
         }
     }
 
@@ -371,68 +384,72 @@
         top: 15px;
 
         &-left {
-        transform: translateX(-495px);
+            transform: translateX(-495px);
         }
 
         &-right {
-        transform: translateX(500px);
+            transform: translateX(500px);
         }
     }
 
     .bird {
         &-one {
-        transform: translateX(-638px);
+            transform: translateX(-638px);
         }
 
         &-two {
-        top: 118px;
-        transform: translateX(574px);
+            top: 118px;
+            transform: translateX(574px);
         }
 
         &-three {
-        transform: translateX(-588px);
+            transform: translateX(-588px);
         }
 
         &-four {
-        transform: translateX(-658px);
+            transform: translateX(-658px);
         }
 
         &-five {
-        top: 168px;
-        transform: translateX(554px);
+            top: 168px;
+            transform: translateX(554px);
         }
 
         &-six {
-        top: 188px;
-        transform: translateX(624px);
+            top: 188px;
+            transform: translateX(624px);
         }
     }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
     .castle {
         background-image: url('../../images/castle-unbird-1280.png');
         background-position: center top -50px;
 
         &__button {
-        top: 440px;
-        width: 250px;
-        height: 60px;
-        border: 4px solid var(--gb4);
-        font-size: 25px;
+            top: 440px;
+            width: 250px;
+            height: 60px;
+            border: 4px solid var(--gb4);
+            font-size: 25px;
 
-        &::before {
-            display: none;
+            &::before {
+                display: none;
+            }
         }
+
+        &__copyright {
+            top: 540px;
         }
 
         &__logo {
-        margin-bottom: 30px;
+            margin-bottom: 30px;
 
-        &-img {
-            width: 640px;
-            height: 36px;
-        }
+            &-img {
+                width: 640px;
+                height: 36px;
+            }
         }
     }
 
@@ -490,5 +507,150 @@
             top: 188px;
             transform: translateX(544px);
         }
+    }
+}
+
+@media (max-width: 991px) {
+    .castle {
+        background-position: left top -50px;
+
+        &__logo {
+            margin-bottom: 80px;
+        }
+    }
+
+    .flag {
+        &.flag-left {
+            transform: none;
+            left: 244px;
+        }
+
+        &.flag-right {
+            display: none;
+        }
+    }
+
+    .bird {
+        &.bird-two,
+        &.bird-five,
+        &.bird-six {
+            display: none;
+        }
+
+        &.bird-one,
+        &.bird-three,
+        &.bird-four {
+            transform: none;
+        }
+
+        &.bird-one {
+            top: 80px;
+            left: 60px
+        }
+
+        &.bird-three {
+            top: 130px;
+            left: 110px
+        }
+
+        &.bird-four {
+            top: 160px;
+            left: 40px
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .castle {
+        background-image: url("../../images/mountains.png");
+        background-position: center top 300px;
+        background-repeat: repeat-x;
+
+        &__logo {
+            margin-bottom: 40px;
+        }
+
+        &__logo-img {
+            width: 408px;
+            height: 23px;
+        }
+
+        &__copyright {
+            max-width: 400px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    .flag {
+        display: none;
+    }
+
+    .sumo {
+        transform: translateX(-220px);
+    }
+
+    .link {
+        top: 400px;
+    }
+
+    .bird {
+        &.bird-one {
+            display: none;
+        }
+
+        &.bird-three {
+            transform: translateX(220px);
+            top: 10px;
+            left: 50%;
+        }
+
+        &.bird-four {
+            transform: translateX(200px);
+            top: 50px;
+            left: 50%;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .castle {
+        background-position: center top 345px;
+
+        &__logo-img {
+            width: 300px;
+            height: 64px;
+        }
+
+        &__logo {
+            margin-bottom: 20px;
+        }
+
+        &__auth {
+            width: 300px;
+        }
+
+        &__button {
+            top: 440px;
+        }
+
+        &__copyright {
+            top: 510px;
+        }
+    }
+
+    .bird {
+        display: none;
+    }
+
+    .sumo {
+        display: none;
+    }
+
+    .castle__button:hover~.sumo-walk-1,
+    .castle__button:hover~.sumo-walk-2,
+    .castle__button:focus-visible~.sumo-walk-1,
+    .castle__button:focus-visible~.sumo-walk-2 {
+        display: none;
     }
 }
