@@ -32,10 +32,15 @@
         transform: translateX(-50%);
         width: 306px;
         height: 96px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border: 6px solid var(--gb4);
         background-color: var(--gb1);
         font-size: 40px;
         cursor: pointer;
+        color: var(--gb4);
+        text-decoration: none;
 
         &::before {
             content: "";

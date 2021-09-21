@@ -47,10 +47,15 @@
         transform: translateX(-50%);
         width: 306px;
         height: 96px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border: 6px solid var(--gb4);
         background-color: var(--gb1);
         font-size: 40px;
         cursor: pointer;
+        color: var(--gb4);
+        text-decoration: none;
     }
 
     .castle__button::before {
@@ -600,7 +605,7 @@
         }
 
         .flag-normal {
-            background-image: url(/images/flag1-1280.svg?9c5318259d8c1ad7a5e2a345587dd0a0);
+            background-image: url(/images/flag1-1280.svg?fb93730fa2ff9dd7eac7b5d8dad95d1e);
         }
 
         .flag-up {

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -70,9 +69,9 @@
                 <div class="flag flag-right flag-normal"></div>
                 <div class="flag flag-right flag-up"></div>
 
-                <button class="castle__button" type="button">
-                    press start
-                </button>
+                <a href="/demo" class="castle__button" type="button">
+                    <span>press start</span>
+                </a>
 
                 <div class="sumo sumo-stand"></div>
                 <div class="sumo sumo-walk-1"></div>

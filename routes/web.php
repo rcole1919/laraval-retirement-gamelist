@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/gamelist-simple', function () {
     return view('gamelist-simple');
 });
+
+Route::get('/demo', function () {
+    return view('gamelist');
+});

@@ -26,3 +26,5 @@ mix
         require('postcss-simple-vars')
     ])
     .version();
+
+mix.browserSync();
