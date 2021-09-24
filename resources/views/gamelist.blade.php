@@ -16,7 +16,33 @@
             <header class="header-rgl"></header>
             <main class="main-rgl">
                 <h1 class="visually-hidden">Список игр</h1>
-                <section class="platform">
+                <div class="demo">
+                    <p class="demo__text">
+                        Это демонстрационная версия. После перезагрузки страницы все созданные данные не сохранятся
+                    </p>
+                    <p class="demo__text">
+                        Здесь можно добавлять платформы, колонки учета и тип носителя игры: цифровая или физическая копия. В будущем планируется добавить больше фич
+                    </p>
+
+                    <div class="demo__start-wrapper">
+                        <button class="demo__start" type="button">
+                            Итак, вы купили свою первую игру на новой консоли. Начнём учитывать! Через год Вы уже будете мечтать о том, что на пенсии уж точно все 100500 игр в списке будут пройдены
+                        </button>
+                        <button class="demo__start" type="button">
+                            Просто покажите уже этот ваш список игр!
+                        </button>
+                    </div>
+
+                    <div class="add">
+                        <form class="add__form">
+                            <label for="add-input" class="add__label">Добавить консоль</label>
+                            <input type="text" id="add-input" class="add__input">
+                            <button type="button" class="add__button"></button>
+                        </form>
+                    </div>
+                </div>
+
+                <article class="platform">
                     <div class="platform__head platform__head--open" tabindex="0">
                         <h2 class="platform__title">
                             Nintendo Switch
@@ -119,15 +145,15 @@
                             </div>
                         </div>
                     </div>
-                </section>
+                </article>
 
-                <section class="platform">
+                <article class="platform">
                     <div class="platform__head platform__head--open" tabindex="0">
                         <h2 class="platform__title">
                             Nintendo Switch
                         </h2>
                     </div>
-                </section>
+                </article>
 
             </main>
             <footer class="footer-rgl"></footer>
