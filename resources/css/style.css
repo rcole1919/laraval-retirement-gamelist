@@ -12,6 +12,7 @@
 	--gb2: #C0C0C0;
 	--gb3: #808080;
 	--gb4: #000000;
+    --fac: 'AnotherCastle3', sans-serif;
 }
 
 html {
@@ -24,7 +25,6 @@ html {
 
 body {
 	min-height: 100vh;
-	overflow: hidden;
     min-width: 320px;
 }
 
@@ -36,8 +36,12 @@ body {
 	margin: -1px;
 }
 
+@import './container';
+@import './default';
 @import './title-page/index';
 @import './title-page/castle';
 @import './title-page/auth-form';
 @import './gamelist-simple/gamelist';
 
+@import './gamelist/header-rgl';
+@import './gamelist/demo';

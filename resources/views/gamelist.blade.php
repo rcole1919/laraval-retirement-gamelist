@@ -13,32 +13,67 @@
     </head>
     <body>
         <div id="app">
-            <header class="header-rgl"></header>
+            <header class="header-rgl">
+                <div class="container">
+                    <div class="header-rgl__wrapper">
+                        <div class="header-rgl__avatar">
+                            <img src="/images/link-1.svg" alt="username" width="36" height="36">
+                        </div>
+                    </div>
+                </div>
+            </header>
             <main class="main-rgl">
                 <h1 class="visually-hidden">Список игр</h1>
                 <div class="demo">
-                    <p class="demo__text">
-                        Это демонстрационная версия. После перезагрузки страницы все созданные данные не сохранятся
-                    </p>
-                    <p class="demo__text">
-                        Здесь можно добавлять платформы, колонки учета и тип носителя игры: цифровая или физическая копия. В будущем планируется добавить больше фич
-                    </p>
+                    <div class="container">
+                        <p class="demo__text">
+                            Это демонстрационная версия. После перезагрузки страницы все созданные данные не сохранятся.
+                        </p>
+                        <p class="demo__text">
+                            Здесь можно добавлять платформы, колонки учета и тип носителя игры: цифровая или физическая копия. В будущем планируется добавить больше фич.
+                        </p>
+                        <p class="demo__text">
+                            Итак, вы купили свою первую игру на новой консоли. Через год Вы уже будете мечтать о том, что на пенсии уж точно все 100500 игр в списке будут пройдены.
+                        </p>
 
-                    <div class="demo__start-wrapper">
-                        <button class="demo__start" type="button">
-                            Итак, вы купили свою первую игру на новой консоли. Начнём учитывать! Через год Вы уже будете мечтать о том, что на пенсии уж точно все 100500 игр в списке будут пройдены
-                        </button>
-                        <button class="demo__start" type="button">
-                            Просто покажите уже этот ваш список игр!
-                        </button>
+                        <div class="demo__start-wrapper">
+                            <a class="gb-btn demo__start" type="button">
+                                <span>Начать учитывать</span>
+                            </a>
+                            <a class="gb-btn demo__start" type="button">
+                                <span>Просто покажите уже этот ваш список игр!</span>
+                            </a>
+                        </div>
                     </div>
+                </div>
 
-                    <div class="add">
-                        <form class="add__form">
-                            <label for="add-input" class="add__label">Добавить консоль</label>
-                            <input type="text" id="add-input" class="add__input">
-                            <button type="button" class="add__button"></button>
-                        </form>
+                {{-- <div class="add">
+                    <div class="add__form">
+                        <div class="add__item">
+                            <div class="add__field-wrapper">
+                                <label for="add-input" class="add__label">Добавить консоль</label>
+                                <input type="text" id="add-input" class="add__input">
+                                <button type="button" class="add__button"></button>
+                            </div>
+                            <div class="add__added-wrapper">
+                                <span class="add__added-title">PS3 <button class="add__added-delete" type="button"></button></span>
+                                <span class="add__added-title">PS4 <button class="add__added-delete" type="button"></button></span>
+                                <span class="add__added-title">Nintendo Switch <button class="add__added-delete" type="button"></button></span>
+                            </div>
+                        </div>
+                        <div class="add__item">
+                            <div class="add__field-wrapper">
+                                <label for="add-input" class="add__label">Добавить колонку учета</label>
+                                <input type="text" id="add-input" class="add__input">
+                                <button type="button" class="add__button"></button>
+                            </div>
+                            <div class="add__added-wrapper">
+                                <span class="add__added-title">Done <button class="add__added-delete" type="button"></button></span>
+                                <span class="add__added-title">Active <button class="add__added-delete" type="button"></button></span>
+                                <span class="add__added-title">Not begin <button class="add__added-delete" type="button"></button></span>
+                            </div>
+                        </div>
+                        <button class="add__submit" type="button">Сформировать таблицы</button>
                     </div>
                 </div>
 
@@ -77,7 +112,7 @@
                                                 <span class="game-edit__title">
                                                     Change column
                                                 </span>
-                                                {{-- <svg></svg> --}}
+                                                <!-- <svg></svg> -->
                                             </button>
                                             <div class="game-edit__dropdown-list">
                                                 <button clas="game-edit__dropdown-item" type="button">Active</button>
@@ -114,7 +149,7 @@
                                                 <span class="game-edit__title">
                                                     Platform
                                                 </span>
-                                                {{-- <svg></svg> --}}
+                                                <!-- <svg></svg> -->
                                             </button>
                                             <div class="game-edit__dropdown-list">
                                                 <button clas="game-edit__dropdown-item" type="button">Nintendo Switch</button>
@@ -142,6 +177,8 @@
                                         <button class="game__edit-btn" aria-label="Редактировать"></button>
                                     </div>
                                 </div>
+
+                                <button type="button" class="column__add-game" aria-label="Добавить игру"></button>
                             </div>
                         </div>
                     </div>
@@ -153,7 +190,7 @@
                             Nintendo Switch
                         </h2>
                     </div>
-                </article>
+                </article> --}}
 
             </main>
             <footer class="footer-rgl"></footer>

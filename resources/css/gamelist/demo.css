@@ -1,0 +1,20 @@
+.demo {
+    padding-top: 30px;
+    padding-bottom: 90px;
+    font-family: var(--fac);
+    background-image: url("../../images/mountains.png");
+    background-repeat: repeat-x;
+    background-position: center bottom;
+
+    &__text {
+        margin: 0;
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+
+    &__start {
+        margin-bottom: 15px;
+        font-size: 22px;
+        text-align: center;
+    }
+}

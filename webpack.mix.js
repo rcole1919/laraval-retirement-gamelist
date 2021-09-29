@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+const env = process.env.APP_URL;
 
 /*
  |--------------------------------------------------------------------------
@@ -17,8 +18,8 @@ if ( ! mix.inProduction()) {
 }
 
 mix
-    .copyDirectory('resources/fonts', 'public/fonts')
-    .copyDirectory('resources/images', 'public/images')
+    // .copyDirectory('resources/fonts', 'public/fonts')
+    // .copyDirectory('resources/images', 'public/images')
     .postCss('resources/css/style.css', 'public/css', [
         require('postcss-custom-properties'),
         require('autoprefixer'),
@@ -27,4 +28,4 @@ mix
     ])
     .version();
 
-mix.browserSync();
+mix.browserSync(env);

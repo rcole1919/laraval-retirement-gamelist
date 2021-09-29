@@ -69,7 +69,7 @@
                 <div class="flag flag-right flag-normal"></div>
                 <div class="flag flag-right flag-up"></div>
 
-                <a href="/demo" class="castle__button" type="button">
+                <a href="/demo" class="gb-btn castle__button" type="button">
                     <span>press start</span>
                 </a>
 

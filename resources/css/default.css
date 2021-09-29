@@ -1,0 +1,33 @@
+.gb-btn {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 6px solid var(--gb4);
+    background-color: var(--gb1);
+    cursor: pointer;
+    color: var(--gb4);
+    text-decoration: none;
+
+    @media (max-width: 1279px) {
+        border: 4px solid var(--gb4);
+    }
+
+    &:hover {
+        background-color: var(--gb4);
+        color: var(--gb1);
+    }
+
+    &:active {
+        color: var(--gb2);
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:focus-visible {
+        background-color: var(--gb4);
+        color: var(--gb1);
+    }
+}

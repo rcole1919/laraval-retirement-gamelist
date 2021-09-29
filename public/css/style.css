@@ -1,13 +1,118 @@
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (min-width: 576px) {
+    .container,
+    .container-sm {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .container,
+    .container-md,
+    .container-sm {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1280px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1200px;
+    }
+}
+
+.gb-btn {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 6px solid var(--gb4);
+    background-color: var(--gb1);
+    cursor: pointer;
+    color: var(--gb4);
+    text-decoration: none;
+}
+
+    @media (max-width: 1279px) {.gb-btn {
+        border: 4px solid var(--gb4)
+}
+    }
+
+    .gb-btn:hover {
+        background-color: var(--gb4);
+        color: var(--gb1);
+    }
+
+    .gb-btn:active {
+        color: var(--gb2);
+    }
+
+    .gb-btn:focus {
+        outline: none;
+    }
+
+    .gb-btn:focus-visible {
+        background-color: var(--gb4);
+        color: var(--gb1);
+    }
+
 .index-body {
-  font-family: 'AnotherCastle3', 'Arial', sans-serif;
-  display: flex;
-  flex-direction: column;
+    overflow: hidden;
+    font-family: 'AnotherCastle3', 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 .main-index {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .castle {
@@ -47,15 +152,7 @@
         transform: translateX(-50%);
         width: 306px;
         height: 96px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 6px solid var(--gb4);
-        background-color: var(--gb1);
         font-size: 40px;
-        cursor: pointer;
-        color: var(--gb4);
-        text-decoration: none;
     }
 
     .castle__button::before {
@@ -69,24 +166,6 @@
             height: 18px;
             background-image: url(/images/under-start.png?6bee007d0c64080629b588ce4f2d0d38);
             background-repeat: no-repeat;
-        }
-
-    .castle__button:hover {
-            background-color: var(--gb4);
-            color: var(--gb1);
-        }
-
-    .castle__button:active {
-            color: var(--gb2);
-        }
-
-    .castle__button:focus {
-            outline: none;
-        }
-
-    .castle__button:focus-visible {
-            background-color: var(--gb4);
-            color: var(--gb1);
         }
 
     .castle__copyright {
@@ -563,7 +642,6 @@
             top: 440px;
             width: 250px;
             height: 60px;
-            border: 4px solid var(--gb4);
             font-size: 25px;
         }
 
@@ -605,7 +683,7 @@
         }
 
         .flag-normal {
-            background-image: url(/images/flag1-1280.svg?fb93730fa2ff9dd7eac7b5d8dad95d1e);
+            background-image: url(/images/flag1-1280.svg?9c5318259d8c1ad7a5e2a345587dd0a0);
         }
 
         .flag-up {
@@ -903,6 +981,44 @@
 .gl-old tfoot {
         text-align: center;
     }
+.header-rgl {
+    background-color: var(--gb4);
+}
+
+    .header-rgl__wrapper {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        display: flex;
+    }
+
+    .header-rgl__avatar {
+        margin-left: auto;
+        display: flex;
+        border-radius: 50%;
+        background-color: var(--gb1);
+    }
+
+.demo {
+    padding-top: 30px;
+    padding-bottom: 90px;
+    font-family: var(--fac);
+    background-image: url(/images/mountains.png?eb69d8feb020ff7d247d68191015479d);
+    background-repeat: repeat-x;
+    background-position: center bottom;
+}
+
+    .demo__text {
+        margin: 0;
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+
+    .demo__start {
+        margin-bottom: 15px;
+        font-size: 22px;
+        text-align: center;
+    }
+
 @font-face {
 	font-family: 'AnotherCastle3';
 	font-style: normal;
@@ -917,6 +1033,7 @@
 	--gb2: #C0C0C0;
 	--gb3: #808080;
 	--gb4: #000000;
+    --fac: 'AnotherCastle3', sans-serif;
 }
 
 html {
@@ -929,7 +1046,6 @@ html {
 
 body {
 	min-height: 100vh;
-	overflow: hidden;
     min-width: 320px;
 }
 
@@ -940,5 +1056,4 @@ body {
 	height: 1px;
 	margin: -1px;
 }
-
 
