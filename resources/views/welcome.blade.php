@@ -46,7 +46,7 @@
                         <a class="auth-form__link" href="#">Я забыл пароль</a>
                     </div>
                     <div class="auth-form__guest">
-                        <a class="auth-form__link" href="gamelist.html">Войти как гость</a>
+                        <a class="auth-form__link" href="/demo">Войти как гость</a>
                     </div>
                     </form>
                 </div>

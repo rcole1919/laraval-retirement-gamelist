@@ -7,7 +7,7 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="{{mix('/css/style.css')}}" />
 
         <title>Список игр на пенсию</title>
     </head>
@@ -24,17 +24,19 @@
             </header>
             <main class="main-rgl">
                 <h1 class="visually-hidden">Список игр</h1>
-                <div class="demo">
+                {{-- <div class="demo">
                     <div class="container">
-                        <p class="demo__text">
-                            Это демонстрационная версия. После перезагрузки страницы все созданные данные не сохранятся.
-                        </p>
-                        <p class="demo__text">
-                            Здесь можно добавлять платформы, колонки учета и тип носителя игры: цифровая или физическая копия. В будущем планируется добавить больше фич.
-                        </p>
-                        <p class="demo__text">
-                            Итак, вы купили свою первую игру на новой консоли. Через год Вы уже будете мечтать о том, что на пенсии уж точно все 100500 игр в списке будут пройдены.
-                        </p>
+                        <div class="demo__text-wrapper">
+                            <p class="demo__text">
+                                Это демонстрационная версия. После перезагрузки страницы все созданные данные не сохранятся.
+                            </p>
+                            <p class="demo__text">
+                                Здесь можно добавлять платформы, колонки учета и тип носителя игры: цифровая или физическая копия. В будущем планируется добавить больше фич.
+                            </p>
+                            <p class="demo__text">
+                                Итак, вы купили свою первую игру на новой консоли. Через год Вы уже будете мечтать о том, что на пенсии уж точно все 100500 игр в списке будут пройдены.
+                            </p>
+                        </div>
 
                         <div class="demo__start-wrapper">
                             <a class="gb-btn demo__start" type="button">
@@ -45,39 +47,46 @@
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
-                {{-- <div class="add">
-                    <div class="add__form">
-                        <div class="add__item">
-                            <div class="add__field-wrapper">
-                                <label for="add-input" class="add__label">Добавить консоль</label>
-                                <input type="text" id="add-input" class="add__input">
-                                <button type="button" class="add__button"></button>
+                <div class="add">
+                    <div class="container">
+                        <div class="add__form">
+                            <div class="add__item">
+                                <div class="add__field-wrapper">
+                                    <label for="add-console" class="add__label">Добавить консоль</label>
+                                    <div class="add__input-wrapper">
+                                        <input type="text" id="add-console" class="add__input">
+                                    </div>
+                                    <button type="button" class="add__button"></button>
+                                </div>
+                                <div class="add__added-wrapper">
+                                    <span class="add__added-title"><span>PS3</span> <button class="add__added-delete" type="button"></button></span>
+                                    <span class="add__added-title"><span>Nintendo Switch</span> <button class="add__added-delete" type="button"></button></span>
+                                    <span class="add__added-title"><span>Mega Drive</span> <button class="add__added-delete" type="button"></button></span>
+                                </div>
                             </div>
-                            <div class="add__added-wrapper">
-                                <span class="add__added-title">PS3 <button class="add__added-delete" type="button"></button></span>
-                                <span class="add__added-title">PS4 <button class="add__added-delete" type="button"></button></span>
-                                <span class="add__added-title">Nintendo Switch <button class="add__added-delete" type="button"></button></span>
+                            <div class="add__item">
+                                <div class="add__field-wrapper">
+                                    <label for="add-column" class="add__label">Добавить колонку</label>
+                                    <div class="add__input-wrapper">
+                                        <input type="text" id="add-column" class="add__input">
+                                    </div>
+                                    <button type="button" class="add__button"></button>
+                                </div>
+                                <div class="add__added-wrapper">
+                                    <span class="add__added-title"><span>Done</span> <button class="add__added-delete" type="button"></button></span>
+                                    <span class="add__added-title"><span>Active</span> <button class="add__added-delete" type="button"></button></span>
+                                    <span class="add__added-title"><span>Not begin</span> <button class="add__added-delete" type="button"></button></span>
+                                </div>
                             </div>
+                            <button class="add__submit" type="button">Сформировать таблицы</button>
                         </div>
-                        <div class="add__item">
-                            <div class="add__field-wrapper">
-                                <label for="add-input" class="add__label">Добавить колонку учета</label>
-                                <input type="text" id="add-input" class="add__input">
-                                <button type="button" class="add__button"></button>
-                            </div>
-                            <div class="add__added-wrapper">
-                                <span class="add__added-title">Done <button class="add__added-delete" type="button"></button></span>
-                                <span class="add__added-title">Active <button class="add__added-delete" type="button"></button></span>
-                                <span class="add__added-title">Not begin <button class="add__added-delete" type="button"></button></span>
-                            </div>
-                        </div>
-                        <button class="add__submit" type="button">Сформировать таблицы</button>
                     </div>
+
                 </div>
 
-                <article class="platform">
+                {{-- <article class="platform">
                     <div class="platform__head platform__head--open" tabindex="0">
                         <h2 class="platform__title">
                             Nintendo Switch

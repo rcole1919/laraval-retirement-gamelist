@@ -44,4 +44,6 @@ body {
 @import './gamelist-simple/gamelist';
 
 @import './gamelist/header-rgl';
+@import './gamelist/main-rgl';
 @import './gamelist/demo';
+@import './gamelist/add';
