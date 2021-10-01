@@ -47,3 +47,4 @@ body {
 @import './gamelist/main-rgl';
 @import './gamelist/demo';
 @import './gamelist/add';
+@import './gamelist/platform';

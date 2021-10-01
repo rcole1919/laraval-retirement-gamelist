@@ -1,6 +1,6 @@
 const mix = require('laravel-mix');
 const env = process.env.APP_URL;
-
+require('laravel-mix-svg-sprite');
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -20,6 +20,7 @@ if ( ! mix.inProduction()) {
 mix
     // .copyDirectory('resources/fonts', 'public/fonts')
     // .copyDirectory('resources/images', 'public/images')
+    .svgSprite('resources/icon', 'public/sprite.svg')
     .postCss('resources/css/style.css', 'public/css', [
         require('postcss-custom-properties'),
         require('autoprefixer'),
