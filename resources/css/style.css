@@ -48,3 +48,6 @@ body {
 @import './gamelist/demo';
 @import './gamelist/add';
 @import './gamelist/platform';
+@import './gamelist/column';
+@import './gamelist/game';
+@import './gamelist/game-edit';

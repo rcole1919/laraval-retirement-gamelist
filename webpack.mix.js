@@ -1,6 +1,6 @@
 const mix = require('laravel-mix');
 const env = process.env.APP_URL;
-require('laravel-mix-svg-sprite');
+const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -20,13 +20,34 @@ if ( ! mix.inProduction()) {
 mix
     // .copyDirectory('resources/fonts', 'public/fonts')
     // .copyDirectory('resources/images', 'public/images')
-    .svgSprite('resources/icon', 'public/sprite.svg')
+    .js('resources/js/demo.js', 'public/js')
     .postCss('resources/css/style.css', 'public/css', [
         require('postcss-custom-properties'),
         require('autoprefixer'),
         require('postcss-nested'),
         require('postcss-simple-vars')
     ])
+    .webpackConfig({
+        plugins: [
+            new SVGSpritemapPlugin(
+                'resources/icon/*.svg',
+                {
+                    output: {
+                        filename: 'sprite/icons.svg',
+                        chunk: {
+                            keep: true, // Включаем, чтобы при сборке не было ошибок из-за отсутствия spritemap.js
+                        },
+                    },
+                    sprite: {
+                        prefix: 'icon-', // Префикс для id иконок в спрайте, будет иметь вид 'icon-имя_файла_с_иконкой'
+                        generate: {
+                            title: false, // Не добавляем в спрайт теги <title>
+                        }
+                    }
+                }
+            )
+        ]
+    })
     .version();
 
 mix.browserSync(env);

@@ -25,11 +25,17 @@
         max-width: 1200px;
     }
 }
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1500px;
+    }
+}
 .container-fluid,
 .container-lg,
 .container-md,
 .container-sm,
-.container-xl {
+.container-xl,
+.container-xxl {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
@@ -64,5 +70,15 @@
     .container-sm,
     .container-xl {
         max-width: 1200px;
+    }
+}
+@media (min-width: 1600px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1500px;
     }
 }

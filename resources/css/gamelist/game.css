@@ -1,0 +1,49 @@
+.game {
+    margin-bottom: 15px;
+
+    &__head {
+        border: 1px solid var(--gb3);
+        padding-left: 7px;
+        padding-right: 7px;
+        padding-bottom: 4px;
+        padding-top: 6px;
+        display: flex;
+
+        &--open {
+            border-color: transparent;
+            background-color: var(--gb3);
+            color: var(--gb1);
+        }
+    }
+
+    &__title {
+        display: flex;
+        line-height: normal;
+    }
+
+    &__exist-type {
+        min-width: 15px;
+        margin-right: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__edit-btn {
+        margin-left: auto;
+        border: none;
+        width: 16px;
+        height: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        background-color: transparent;
+        color: inherit;
+        cursor: pointer;
+
+        &:hover {
+            color: var(--gb2);
+        }
+    }
+}

@@ -87,125 +87,496 @@
 
                 <div class="platform">
                     <div class="container">
-                        <article class="platform__item">
-                            <div class="platform__head" tabindex="0">
-                                <h2 class="platform__title platform__title--open">
-                                    Nintendo Switch
-                                </h2>
-                            </div>
-                            <div class="column">
-                                <div class="column__item">
-                                    <div class="column__head">
-                                        <div class="column__title">
-                                            Done
+                        <div class="platform__list">
+                            <article class="platform__item">
+                                <div class="platform__head" tabindex="0">
+                                    <h2 class="platform__title platform__title--open">
+                                        Nintendo Switch
+                                    </h2>
+                                </div>
+                                <div class="column">
+                                    <div class="column__item">
+                                        <div class="column__head">
+                                            <div class="column__title">
+                                                Done
+                                            </div>
+                                            <div class="column__count-wrapper">
+                                                <div class="column__count">
+                                                    <svg width="15" height="11">
+                                                        <use xlink:href="/sprite/icons.svg#icon-digital"></use>
+                                                    </svg>
+                                                    <span>34</span>
+                                                </div>
+                                                <div class="column__count">
+                                                    <svg width="12" height="12">
+                                                        <use xlink:href="/sprite/icons.svg#icon-physic"></use>
+                                                    </svg>
+                                                    <span>45</span>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="column__count-wrapper">
-                                            <div class="column__count-digital">
-                                                34
+                                        <div class="column__body">
+                                            <div class="game">
+                                                <div class="game__head">
+                                                    <div class="game__title">
+                                                        <div class="game__exist-type">
+                                                            <svg width="15" height="11">
+                                                                <use xlink:href="/sprite/icons.svg#icon-digital"></use>
+                                                            </svg>
+                                                        </div>
+                                                        <span>Zelda</span>
+                                                    </div>
+                                                    <button class="game__edit-btn" aria-label="Редактировать">
+                                                        <svg width="16" height="13">
+                                                            <use xlink:href="/sprite/icons.svg#icon-edit-game"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
                                             </div>
-                                            <div class="column__count-physic">
-                                                45
+
+                                            <div class="game">
+                                                <div class="game__head game__head--open">
+                                                    <div class="game__title">
+                                                        <div class="game__exist-type">
+                                                            <svg width="12" height="12">
+                                                                <use xlink:href="/sprite/icons.svg#icon-physic"></use>
+                                                            </svg>
+                                                        </div>
+                                                        <span>Zelda</span>
+                                                    </div>
+                                                    <button class="game__edit-btn" aria-label="Редактировать">
+                                                        <svg width="12" height="12">
+                                                            <use xlink:href="/sprite/icons.svg#icon-edit-close"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="game__edit-popup game-edit">
+                                                    <div class="game-edit__item game-edit__item--open">
+                                                        <button class="game-edit__title" type="button">
+                                                            <span>
+                                                                Change column
+                                                            </span>
+                                                            <div class="game-edit__dropdown-icon">
+                                                                <svg width="8" height="5">
+                                                                    <use xlink:href="/sprite/icons.svg#icon-dropdown-select"></use>
+                                                                </svg>
+                                                            </div>
+                                                        </button>
+                                                        <div class="game-edit__dropdown-list">
+                                                            <button class="game-edit__dropdown-item" type="button">Active</button>
+                                                            <button class="game-edit__dropdown-item" type="button">Not begin</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="game-edit__item">
+                                                        <button type="button" class="game-edit__title">
+                                                            <span>
+                                                                Delete
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="game-edit__item">
+                                                        <button type="button" class="game-edit__title">
+                                                            <span>
+                                                                Edit
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                </div>
                                             </div>
+
+                                            <div class="game">
+                                                <div class="game__head game__head--physic game__head--open">
+                                                    <div class="game__exist-type">
+                                                        <svg width="15" height="11">
+                                                            <use xlink:href="/sprite/icons.svg#icon-digital"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <span>Metroid</span>
+                                                    <button class="game__edit-btn" aria-label="Редактировать">
+                                                        <svg width="12" height="12">
+                                                            <use xlink:href="/sprite/icons.svg#icon-edit-close"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="game__edit-popup game-edit">
+                                                    <div class="game-edit__item game-edit__input">
+                                                        <label class="game-edit__input-label" for="title">Title:</label>
+                                                        <div class="game-edit__input-wrapper">
+                                                            <input class="game-edit__input-enter" type="text" value="Metroid" id="title">
+                                                        </div>
+                                                    </div>
+                                                    <div class="game-edit__item">
+                                                        <button class="game-edit__title" type="button">
+                                                            <span>
+                                                                Platform
+                                                            </span>
+                                                            <div class="game-edit__dropdown-icon">
+                                                                <svg width="8" height="5">
+                                                                    <use xlink:href="/sprite/icons.svg#icon-dropdown-select"></use>
+                                                                </svg>
+                                                            </div>
+                                                        </button>
+                                                        <div class="game-edit__dropdown-list">
+                                                            <button class="game-edit__dropdown-item" type="button">Nintendo Switch</button>
+                                                            <button class="game-edit__dropdown-item" type="button">PS4</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="game-edit__item game-edit__radio">
+                                                        <div class="game-edit__radio-item">
+                                                            <input class="game-edit__radio-input visually-hidden" type="radio" id="digital-type" name="exist-type" value="digital" checked>
+                                                            <label class="game-edit__radio-label" for="digital-type">Digital</label>
+                                                        </div>
+                                                        <div class="game-edit__radio-item">
+                                                            <input class="game-edit__radio-input visually-hidden" type="radio" id="physic-type" name="exist-type" value="physic">
+                                                            <label class="game-edit__radio-label" for="physic-type">Physic</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="column__add-game" title="Добавить игру">
+                                                <svg width="15" height="15">
+                                                    <use xlink:href="/sprite/icons.svg#icon-add-game"></use>
+                                                </svg>
+                                            </button>
                                         </div>
                                     </div>
-                                    <div class="column__body">
-                                        <div class="game">
-                                            <div class="game__head game__head--digital">
-                                                <div class="game__title">
-                                                    Zelda
-                                                </div>
-                                                <button class="game__edit-btn" aria-label="Редактировать"></button>
+
+                                    <div class="column__item">
+                                        <div class="column__head">
+                                            <div class="column__title">
+                                                Active
                                             </div>
-                                            <div class="game__edit-popup game-edit">
-                                                <div class="game-edit__item game-edit__select game-edit__select--open">
-                                                    <button class="game-edit__title-wrapper" type="button">
-                                                        <span class="game-edit__title">
-                                                            Change column
-                                                        </span>
-                                                        <!-- <svg></svg> -->
-                                                    </button>
-                                                    <div class="game-edit__dropdown-list">
-                                                        <button clas="game-edit__dropdown-item" type="button">Active</button>
-                                                        <button clas="game-edit__dropdown-item" type="button">Not begin</button>
-                                                    </div>
+                                            <div class="column__count-wrapper">
+                                                <div class="column__count">
+                                                    <svg width="15" height="11">
+                                                        <use xlink:href="/sprite/icons.svg#icon-digital"></use>
+                                                    </svg>
+                                                    <span>34</span>
                                                 </div>
-                                                <div class="game-edit__item">
-                                                    <button type="button" class="game-edit__title">
-                                                        Delete
-                                                    </button>
-                                                </div>
-                                                <div class="game-edit__item">
-                                                    <button type="button" class="game-edit__title">
-                                                        Edit
-                                                    </button>
+                                                <div class="column__count">
+                                                    <svg width="12" height="12">
+                                                        <use xlink:href="/sprite/icons.svg#icon-physic"></use>
+                                                    </svg>
+                                                    <span>45</span>
                                                 </div>
                                             </div>
                                         </div>
-
-                                        <div class="game">
-                                            <div class="game__head game__head--physic game__head--open">
-                                                <div class="game__title">
-                                                    Metroid
-                                                </div>
-                                                <button class="game__edit-btn" aria-label="Редактировать"></button>
-                                            </div>
-                                            <div class="game__edit-popup game-edit">
-                                                <div class="game-edit__item game-edit__input">
-                                                    <label for="title">Title:</label>
-                                                    <input type="text" id="title">
-                                                </div>
-                                                <div class="game-edit__item game-edit__select game-edit__select--open">
-                                                    <button class="game-edit__title-wrapper" type="button">
-                                                        <span class="game-edit__title">
-                                                            Platform
-                                                        </span>
-                                                        <!-- <svg></svg> -->
+                                        <div class="column__body">
+                                            <div class="game">
+                                                <div class="game__head">
+                                                    <div class="game__title">
+                                                        <div class="game__exist-type">
+                                                            <svg width="15" height="11">
+                                                                <use xlink:href="/sprite/icons.svg#icon-digital"></use>
+                                                            </svg>
+                                                        </div>
+                                                        <span>Zelda</span>
+                                                    </div>
+                                                    <button class="game__edit-btn" aria-label="Редактировать">
+                                                        <svg width="16" height="13">
+                                                            <use xlink:href="/sprite/icons.svg#icon-edit-game"></use>
+                                                        </svg>
                                                     </button>
-                                                    <div class="game-edit__dropdown-list">
-                                                        <button clas="game-edit__dropdown-item" type="button">Nintendo Switch</button>
-                                                        <button clas="game-edit__dropdown-item" type="button">PS4</button>
-                                                    </div>
                                                 </div>
-                                                <div class="game-edit__item game-edit__radio-wrapper">
-                                                    <div class="game-edit__radio-item">
-                                                        <input type="radio" id="digital-type" name="exist-type" value="digital">
-                                                        <label for="digital-type">Digital</label>
+                                            </div>
+
+                                            <div class="game">
+                                                <div class="game__head">
+                                                    <div class="game__title">
+                                                        <div class="game__exist-type">
+                                                            <svg width="12" height="12">
+                                                                <use xlink:href="/sprite/icons.svg#icon-physic"></use>
+                                                            </svg>
+                                                        </div>
+                                                        <span>Zelda</span>
                                                     </div>
-                                                    <div class="game-edit__radio-item">
-                                                        <input type="radio" id="physic-type" name="exist-type" value="physic">
-                                                        <label for="physic-type">Physic</label>
+                                                    <button class="game__edit-btn" aria-label="Редактировать">
+                                                        <svg width="12" height="12">
+                                                            <use xlink:href="/sprite/icons.svg#icon-edit-close"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <div class="game">
+                                                <div class="game__head">
+                                                    <div class="game__exist-type">
+                                                        <svg width="15" height="11">
+                                                            <use xlink:href="/sprite/icons.svg#icon-digital"></use>
+                                                        </svg>
                                                     </div>
+                                                    <span>Metroid</span>
+                                                    <button class="game__edit-btn" aria-label="Редактировать">
+                                                        <svg width="12" height="12">
+                                                            <use xlink:href="/sprite/icons.svg#icon-edit-close"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="column__add-game" title="Добавить игру">
+                                                <svg width="15" height="15">
+                                                    <use xlink:href="/sprite/icons.svg#icon-add-game"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="column__item">
+                                        <div class="column__head">
+                                            <div class="column__title">
+                                                Active
+                                            </div>
+                                            <div class="column__count-wrapper">
+                                                <div class="column__count">
+                                                    <svg width="15" height="11">
+                                                        <use xlink:href="/sprite/icons.svg#icon-digital"></use>
+                                                    </svg>
+                                                    <span>34</span>
+                                                </div>
+                                                <div class="column__count">
+                                                    <svg width="12" height="12">
+                                                        <use xlink:href="/sprite/icons.svg#icon-physic"></use>
+                                                    </svg>
+                                                    <span>45</span>
                                                 </div>
                                             </div>
                                         </div>
-
-                                        <div class="game">
-                                            <div class="game__head game__head--physic">
-                                                <div class="game__title">
-                                                    Doom
+                                        <div class="column__body">
+                                            <div class="game">
+                                                <div class="game__head">
+                                                    <div class="game__title">
+                                                        <div class="game__exist-type">
+                                                            <svg width="15" height="11">
+                                                                <use xlink:href="/sprite/icons.svg#icon-digital"></use>
+                                                            </svg>
+                                                        </div>
+                                                        <span>Zelda</span>
+                                                    </div>
+                                                    <button class="game__edit-btn" aria-label="Редактировать">
+                                                        <svg width="16" height="13">
+                                                            <use xlink:href="/sprite/icons.svg#icon-edit-game"></use>
+                                                        </svg>
+                                                    </button>
                                                 </div>
-                                                <button class="game__edit-btn" aria-label="Редактировать"></button>
+                                            </div>
+
+                                            <div class="game">
+                                                <div class="game__head">
+                                                    <div class="game__title">
+                                                        <div class="game__exist-type">
+                                                            <svg width="12" height="12">
+                                                                <use xlink:href="/sprite/icons.svg#icon-physic"></use>
+                                                            </svg>
+                                                        </div>
+                                                        <span>Zelda</span>
+                                                    </div>
+                                                    <button class="game__edit-btn" aria-label="Редактировать">
+                                                        <svg width="12" height="12">
+                                                            <use xlink:href="/sprite/icons.svg#icon-edit-close"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <div class="game">
+                                                <div class="game__head">
+                                                    <div class="game__exist-type">
+                                                        <svg width="15" height="11">
+                                                            <use xlink:href="/sprite/icons.svg#icon-digital"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <span>Metroid</span>
+                                                    <button class="game__edit-btn" aria-label="Редактировать">
+                                                        <svg width="12" height="12">
+                                                            <use xlink:href="/sprite/icons.svg#icon-edit-close"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="column__add-game" title="Добавить игру">
+                                                <svg width="15" height="15">
+                                                    <use xlink:href="/sprite/icons.svg#icon-add-game"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="column__item">
+                                        <div class="column__head">
+                                            <div class="column__title">
+                                                Active
+                                            </div>
+                                            <div class="column__count-wrapper">
+                                                <div class="column__count">
+                                                    <svg width="15" height="11">
+                                                        <use xlink:href="/sprite/icons.svg#icon-digital"></use>
+                                                    </svg>
+                                                    <span>34</span>
+                                                </div>
+                                                <div class="column__count">
+                                                    <svg width="12" height="12">
+                                                        <use xlink:href="/sprite/icons.svg#icon-physic"></use>
+                                                    </svg>
+                                                    <span>45</span>
+                                                </div>
                                             </div>
                                         </div>
+                                        <div class="column__body">
+                                            <div class="game">
+                                                <div class="game__head">
+                                                    <div class="game__title">
+                                                        <div class="game__exist-type">
+                                                            <svg width="15" height="11">
+                                                                <use xlink:href="/sprite/icons.svg#icon-digital"></use>
+                                                            </svg>
+                                                        </div>
+                                                        <span>Zelda</span>
+                                                    </div>
+                                                    <button class="game__edit-btn" aria-label="Редактировать">
+                                                        <svg width="16" height="13">
+                                                            <use xlink:href="/sprite/icons.svg#icon-edit-game"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
 
-                                        <button type="button" class="column__add-game" aria-label="Добавить игру"></button>
+                                            <div class="game">
+                                                <div class="game__head">
+                                                    <div class="game__title">
+                                                        <div class="game__exist-type">
+                                                            <svg width="12" height="12">
+                                                                <use xlink:href="/sprite/icons.svg#icon-physic"></use>
+                                                            </svg>
+                                                        </div>
+                                                        <span>Zelda</span>
+                                                    </div>
+                                                    <button class="game__edit-btn" aria-label="Редактировать">
+                                                        <svg width="12" height="12">
+                                                            <use xlink:href="/sprite/icons.svg#icon-edit-close"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <div class="game">
+                                                <div class="game__head">
+                                                    <div class="game__exist-type">
+                                                        <svg width="15" height="11">
+                                                            <use xlink:href="/sprite/icons.svg#icon-digital"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <span>Metroid</span>
+                                                    <button class="game__edit-btn" aria-label="Редактировать">
+                                                        <svg width="12" height="12">
+                                                            <use xlink:href="/sprite/icons.svg#icon-edit-close"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="column__add-game" title="Добавить игру">
+                                                <svg width="15" height="15">
+                                                    <use xlink:href="/sprite/icons.svg#icon-add-game"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="column__item">
+                                        <div class="column__head">
+                                            <div class="column__title">
+                                                Active
+                                            </div>
+                                            <div class="column__count-wrapper">
+                                                <div class="column__count">
+                                                    <svg width="15" height="11">
+                                                        <use xlink:href="/sprite/icons.svg#icon-digital"></use>
+                                                    </svg>
+                                                    <span>34</span>
+                                                </div>
+                                                <div class="column__count">
+                                                    <svg width="12" height="12">
+                                                        <use xlink:href="/sprite/icons.svg#icon-physic"></use>
+                                                    </svg>
+                                                    <span>45</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="column__body">
+                                            <div class="game">
+                                                <div class="game__head">
+                                                    <div class="game__title">
+                                                        <div class="game__exist-type">
+                                                            <svg width="15" height="11">
+                                                                <use xlink:href="/sprite/icons.svg#icon-digital"></use>
+                                                            </svg>
+                                                        </div>
+                                                        <span>Zelda</span>
+                                                    </div>
+                                                    <button class="game__edit-btn" aria-label="Редактировать">
+                                                        <svg width="16" height="13">
+                                                            <use xlink:href="/sprite/icons.svg#icon-edit-game"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <div class="game">
+                                                <div class="game__head">
+                                                    <div class="game__title">
+                                                        <div class="game__exist-type">
+                                                            <svg width="12" height="12">
+                                                                <use xlink:href="/sprite/icons.svg#icon-physic"></use>
+                                                            </svg>
+                                                        </div>
+                                                        <span>Zelda</span>
+                                                    </div>
+                                                    <button class="game__edit-btn" aria-label="Редактировать">
+                                                        <svg width="12" height="12">
+                                                            <use xlink:href="/sprite/icons.svg#icon-edit-close"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <div class="game">
+                                                <div class="game__head">
+                                                    <div class="game__exist-type">
+                                                        <svg width="15" height="11">
+                                                            <use xlink:href="/sprite/icons.svg#icon-digital"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <span>Metroid</span>
+                                                    <button class="game__edit-btn" aria-label="Редактировать">
+                                                        <svg width="12" height="12">
+                                                            <use xlink:href="/sprite/icons.svg#icon-edit-close"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="column__add-game" title="Добавить игру">
+                                                <svg width="15" height="15">
+                                                    <use xlink:href="/sprite/icons.svg#icon-add-game"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </article>
+                            </article>
 
-                        <article class="platform">
-                            <div class="platform__head platform__head--open" tabindex="0">
-                                <h2 class="platform__title">
-                                    Nintendo Switch
-                                </h2>
-                            </div>
-                        </article>
+                            <article class="platform">
+                                <div class="platform__head platform__head--open" tabindex="0">
+                                    <h2 class="platform__title">
+                                        Nintendo Switch
+                                    </h2>
+                                </div>
+                            </article>
+                        </div>
                     </div>
                 </div>
 
             </main>
             <footer class="footer-rgl"></footer>
         </div>
+        <script src="{{mix('/js/demo.js')}}"></script>
     </body>
 </html>
