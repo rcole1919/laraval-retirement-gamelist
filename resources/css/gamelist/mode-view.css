@@ -1,0 +1,21 @@
+.mode-view {
+    margin-bottom: 20px;
+    display: flex;
+
+    &__button {
+        padding: 0;
+        margin-right: 16px;
+        border: none;
+        display: flex;
+        background-color: transparent;
+        color: var(--gb2);
+
+        &:hover {
+            color: var(--gb3);
+        }
+
+        &:active {
+            color: var(--gb4);
+        }
+    }
+}

@@ -1,16 +1,17 @@
 .column {
     border-bottom: 4px solid var(--gb3);
+    border-right: 1px solid var(--gb2);
+    border-left: 1px solid var(--gb2);
     display: flex;
     overflow-x: auto;
+    scroll-snap-type: x mandatory;
 
     &__item {
         min-width: 100%;
         border-right: 1px solid var(--gb2);
+        border-left: 1px solid var(--gb2);
         width: 100%;
-
-        &:first-child {
-            border-left: 1px solid var(--gb2);
-        }
+        scroll-snap-align: start;
 
         @media (min-width: 576px) {
             min-width: 50%;

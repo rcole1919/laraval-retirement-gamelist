@@ -33,7 +33,7 @@ mix
                 'resources/icon/*.svg',
                 {
                     output: {
-                        filename: 'sprite/icons.svg',
+                        filename: '../resources/views/icons.blade.php',
                         chunk: {
                             keep: true, // Включаем, чтобы при сборке не было ошибок из-за отсутствия spritemap.js
                         },

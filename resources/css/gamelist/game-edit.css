@@ -129,4 +129,34 @@
     &__radio-input:checked:focus-visible + label {
         color: var(--gb4);
     }
+
+    &__sure {
+        border: 1px solid var(--gb2);
+        border-bottom: none;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__sure-text {
+        margin-right: auto;
+        color: var(--gb3);
+    }
+
+    &__sure-button {
+        padding: 0;
+        margin-left: 10px;
+        width: 20px;
+        height: 20px;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--gb3);
+        color: var(--gb1);
+
+        &:hover {
+            background-color: var(--gb4);
+        }
+    }
 }

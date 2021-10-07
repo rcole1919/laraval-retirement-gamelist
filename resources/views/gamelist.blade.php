@@ -12,6 +12,9 @@
         <title>Список игр на пенсию</title>
     </head>
     <body>
+        <div style="display: none;">
+            @include('icons')
+        </div>
         <div id="app">
             <header class="header-rgl">
                 <div class="container">
@@ -61,9 +64,30 @@
                                     <button type="button" class="add__button"></button>
                                 </div>
                                 <div class="add__added-wrapper">
-                                    <span class="add__added-title"><span>PS3</span> <button class="add__added-delete" type="button"></button></span>
-                                    <span class="add__added-title"><span>Nintendo Switch</span> <button class="add__added-delete" type="button"></button></span>
-                                    <span class="add__added-title"><span>Mega Drive</span> <button class="add__added-delete" type="button"></button></span>
+                                    <span class="add__added-title">
+                                        <span title="Переименовать" tabindex="0" class="add__added-text">Not begin</span>
+                                        <button title="Удалить" class="add__added-delete" type="button">
+                                            <svg width="10" height="10">
+                                                <use xlink:href="#icon-edit-close"></use>
+                                            </svg>
+                                        </button>
+                                    </span>
+                                    <span class="add__added-title">
+                                        <span title="Переименовать" tabindex="0" class="add__added-text">Not begin</span>
+                                        <button title="Удалить" class="add__added-delete" type="button">
+                                            <svg width="10" height="10">
+                                                <use xlink:href="#icon-edit-close"></use>
+                                            </svg>
+                                        </button>
+                                    </span>
+                                    <span class="add__added-title">
+                                        <span title="Переименовать" tabindex="0" class="add__added-text">Not begin</span>
+                                        <button title="Удалить" class="add__added-delete" type="button">
+                                            <svg width="10" height="10">
+                                                <use xlink:href="#icon-edit-close"></use>
+                                            </svg>
+                                        </button>
+                                    </span>
                                 </div>
                             </div>
                             <div class="add__item">
@@ -75,9 +99,30 @@
                                     <button type="button" class="add__button"></button>
                                 </div>
                                 <div class="add__added-wrapper">
-                                    <span class="add__added-title"><span>Done</span> <button class="add__added-delete" type="button"></button></span>
-                                    <span class="add__added-title"><span>Active</span> <button class="add__added-delete" type="button"></button></span>
-                                    <span class="add__added-title"><span>Not begin</span> <button class="add__added-delete" type="button"></button></span>
+                                    <span class="add__added-title">
+                                        <span title="Переименовать" tabindex="0" class="add__added-text">Not begin</span>
+                                        <button title="Удалить" class="add__added-delete" type="button">
+                                            <svg width="10" height="10">
+                                                <use xlink:href="#icon-edit-close"></use>
+                                            </svg>
+                                        </button>
+                                    </span>
+                                    <span class="add__added-title">
+                                        <span title="Переименовать" tabindex="0" class="add__added-text">Not begin</span>
+                                        <button title="Удалить" class="add__added-delete" type="button">
+                                            <svg width="10" height="10">
+                                                <use xlink:href="#icon-edit-close"></use>
+                                            </svg>
+                                        </button>
+                                    </span>
+                                    <span class="add__added-title">
+                                        <span title="Переименовать" tabindex="0" class="add__added-text">Not begin</span>
+                                        <button title="Удалить" class="add__added-delete" type="button">
+                                            <svg width="10" height="10">
+                                                <use xlink:href="#icon-edit-close"></use>
+                                            </svg>
+                                        </button>
+                                    </span>
                                 </div>
                             </div>
                             <button class="add__submit" type="button">Сформировать таблицы</button>
@@ -87,6 +132,18 @@
 
                 <div class="platform">
                     <div class="container">
+                        <div class="mode-view">
+                            <button type="button" class="mode-view__button" title="Режим списка по консолям">
+                                <svg width="18" height="18">
+                                    <use xlink:href="#icon-mode-rg"></use>
+                                </svg>
+                            </button>
+                            <button type="button" class="mode-view__button" title="Режим сводной таблицы">
+                                <svg width="18" height="18">
+                                    <use xlink:href="#icon-mode-table"></use>
+                                </svg>
+                            </button>
+                        </div>
                         <div class="platform__list">
                             <article class="platform__item">
                                 <div class="platform__head" tabindex="0">
@@ -103,13 +160,13 @@
                                             <div class="column__count-wrapper">
                                                 <div class="column__count">
                                                     <svg width="15" height="11">
-                                                        <use xlink:href="/sprite/icons.svg#icon-digital"></use>
+                                                        <use xlink:href="#icon-digital"></use>
                                                     </svg>
                                                     <span>34</span>
                                                 </div>
                                                 <div class="column__count">
                                                     <svg width="12" height="12">
-                                                        <use xlink:href="/sprite/icons.svg#icon-physic"></use>
+                                                        <use xlink:href="#icon-physic"></use>
                                                     </svg>
                                                     <span>45</span>
                                                 </div>
@@ -121,14 +178,14 @@
                                                     <div class="game__title">
                                                         <div class="game__exist-type">
                                                             <svg width="15" height="11">
-                                                                <use xlink:href="/sprite/icons.svg#icon-digital"></use>
+                                                                <use xlink:href="#icon-digital"></use>
                                                             </svg>
                                                         </div>
                                                         <span>Zelda</span>
                                                     </div>
                                                     <button class="game__edit-btn" aria-label="Редактировать">
                                                         <svg width="16" height="13">
-                                                            <use xlink:href="/sprite/icons.svg#icon-edit-game"></use>
+                                                            <use xlink:href="#icon-edit-game"></use>
                                                         </svg>
                                                     </button>
                                                 </div>
@@ -139,14 +196,14 @@
                                                     <div class="game__title">
                                                         <div class="game__exist-type">
                                                             <svg width="12" height="12">
-                                                                <use xlink:href="/sprite/icons.svg#icon-physic"></use>
+                                                                <use xlink:href="#icon-physic"></use>
                                                             </svg>
                                                         </div>
                                                         <span>Zelda</span>
                                                     </div>
                                                     <button class="game__edit-btn" aria-label="Редактировать">
                                                         <svg width="12" height="12">
-                                                            <use xlink:href="/sprite/icons.svg#icon-edit-close"></use>
+                                                            <use xlink:href="#icon-edit-close"></use>
                                                         </svg>
                                                     </button>
                                                 </div>
@@ -158,7 +215,7 @@
                                                             </span>
                                                             <div class="game-edit__dropdown-icon">
                                                                 <svg width="8" height="5">
-                                                                    <use xlink:href="/sprite/icons.svg#icon-dropdown-select"></use>
+                                                                    <use xlink:href="#icon-dropdown-select"></use>
                                                                 </svg>
                                                             </div>
                                                         </button>
@@ -173,6 +230,19 @@
                                                                 Delete
                                                             </span>
                                                         </button>
+                                                        <div class="game-edit__sure">
+                                                            <span class="game-edit__sure-text">Вы уверены?</span>
+                                                            <button type="button" class="game-edit__sure-button">
+                                                                <svg width="16" height="12">
+                                                                    <use xlink:href="#icon-ok"></use>
+                                                                </svg>
+                                                            </button>
+                                                            <button type="button" class="game-edit__sure-button">
+                                                                <svg width="12" height="12">
+                                                                    <use xlink:href="#icon-edit-close"></use>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
                                                     </div>
                                                     <div class="game-edit__item">
                                                         <button type="button" class="game-edit__title">
@@ -188,13 +258,13 @@
                                                 <div class="game__head game__head--physic game__head--open">
                                                     <div class="game__exist-type">
                                                         <svg width="15" height="11">
-                                                            <use xlink:href="/sprite/icons.svg#icon-digital"></use>
+                                                            <use xlink:href="#icon-digital"></use>
                                                         </svg>
                                                     </div>
                                                     <span>Metroid</span>
                                                     <button class="game__edit-btn" aria-label="Редактировать">
                                                         <svg width="12" height="12">
-                                                            <use xlink:href="/sprite/icons.svg#icon-edit-close"></use>
+                                                            <use xlink:href="#icon-edit-close"></use>
                                                         </svg>
                                                     </button>
                                                 </div>
@@ -212,7 +282,7 @@
                                                             </span>
                                                             <div class="game-edit__dropdown-icon">
                                                                 <svg width="8" height="5">
-                                                                    <use xlink:href="/sprite/icons.svg#icon-dropdown-select"></use>
+                                                                    <use xlink:href="#icon-dropdown-select"></use>
                                                                 </svg>
                                                             </div>
                                                         </button>
@@ -235,7 +305,7 @@
                                             </div>
                                             <button type="button" class="column__add-game" title="Добавить игру">
                                                 <svg width="15" height="15">
-                                                    <use xlink:href="/sprite/icons.svg#icon-add-game"></use>
+                                                    <use xlink:href="#icon-add-game"></use>
                                                 </svg>
                                             </button>
                                         </div>
@@ -249,13 +319,13 @@
                                             <div class="column__count-wrapper">
                                                 <div class="column__count">
                                                     <svg width="15" height="11">
-                                                        <use xlink:href="/sprite/icons.svg#icon-digital"></use>
+                                                        <use xlink:href="#icon-digital"></use>
                                                     </svg>
                                                     <span>34</span>
                                                 </div>
                                                 <div class="column__count">
                                                     <svg width="12" height="12">
-                                                        <use xlink:href="/sprite/icons.svg#icon-physic"></use>
+                                                        <use xlink:href="#icon-physic"></use>
                                                     </svg>
                                                     <span>45</span>
                                                 </div>
@@ -267,14 +337,14 @@
                                                     <div class="game__title">
                                                         <div class="game__exist-type">
                                                             <svg width="15" height="11">
-                                                                <use xlink:href="/sprite/icons.svg#icon-digital"></use>
+                                                                <use xlink:href="#icon-digital"></use>
                                                             </svg>
                                                         </div>
                                                         <span>Zelda</span>
                                                     </div>
                                                     <button class="game__edit-btn" aria-label="Редактировать">
                                                         <svg width="16" height="13">
-                                                            <use xlink:href="/sprite/icons.svg#icon-edit-game"></use>
+                                                            <use xlink:href="#icon-edit-game"></use>
                                                         </svg>
                                                     </button>
                                                 </div>
@@ -285,14 +355,14 @@
                                                     <div class="game__title">
                                                         <div class="game__exist-type">
                                                             <svg width="12" height="12">
-                                                                <use xlink:href="/sprite/icons.svg#icon-physic"></use>
+                                                                <use xlink:href="#icon-physic"></use>
                                                             </svg>
                                                         </div>
                                                         <span>Zelda</span>
                                                     </div>
                                                     <button class="game__edit-btn" aria-label="Редактировать">
                                                         <svg width="12" height="12">
-                                                            <use xlink:href="/sprite/icons.svg#icon-edit-close"></use>
+                                                            <use xlink:href="#icon-edit-close"></use>
                                                         </svg>
                                                     </button>
                                                 </div>
@@ -302,20 +372,20 @@
                                                 <div class="game__head">
                                                     <div class="game__exist-type">
                                                         <svg width="15" height="11">
-                                                            <use xlink:href="/sprite/icons.svg#icon-digital"></use>
+                                                            <use xlink:href="#icon-digital"></use>
                                                         </svg>
                                                     </div>
                                                     <span>Metroid</span>
                                                     <button class="game__edit-btn" aria-label="Редактировать">
                                                         <svg width="12" height="12">
-                                                            <use xlink:href="/sprite/icons.svg#icon-edit-close"></use>
+                                                            <use xlink:href="#icon-edit-close"></use>
                                                         </svg>
                                                     </button>
                                                 </div>
                                             </div>
                                             <button type="button" class="column__add-game" title="Добавить игру">
                                                 <svg width="15" height="15">
-                                                    <use xlink:href="/sprite/icons.svg#icon-add-game"></use>
+                                                    <use xlink:href="#icon-add-game"></use>
                                                 </svg>
                                             </button>
                                         </div>
@@ -329,13 +399,13 @@
                                             <div class="column__count-wrapper">
                                                 <div class="column__count">
                                                     <svg width="15" height="11">
-                                                        <use xlink:href="/sprite/icons.svg#icon-digital"></use>
+                                                        <use xlink:href="#icon-digital"></use>
                                                     </svg>
                                                     <span>34</span>
                                                 </div>
                                                 <div class="column__count">
                                                     <svg width="12" height="12">
-                                                        <use xlink:href="/sprite/icons.svg#icon-physic"></use>
+                                                        <use xlink:href="#icon-physic"></use>
                                                     </svg>
                                                     <span>45</span>
                                                 </div>
@@ -347,14 +417,14 @@
                                                     <div class="game__title">
                                                         <div class="game__exist-type">
                                                             <svg width="15" height="11">
-                                                                <use xlink:href="/sprite/icons.svg#icon-digital"></use>
+                                                                <use xlink:href="#icon-digital"></use>
                                                             </svg>
                                                         </div>
                                                         <span>Zelda</span>
                                                     </div>
                                                     <button class="game__edit-btn" aria-label="Редактировать">
                                                         <svg width="16" height="13">
-                                                            <use xlink:href="/sprite/icons.svg#icon-edit-game"></use>
+                                                            <use xlink:href="#icon-edit-game"></use>
                                                         </svg>
                                                     </button>
                                                 </div>
@@ -365,14 +435,14 @@
                                                     <div class="game__title">
                                                         <div class="game__exist-type">
                                                             <svg width="12" height="12">
-                                                                <use xlink:href="/sprite/icons.svg#icon-physic"></use>
+                                                                <use xlink:href="#icon-physic"></use>
                                                             </svg>
                                                         </div>
                                                         <span>Zelda</span>
                                                     </div>
                                                     <button class="game__edit-btn" aria-label="Редактировать">
                                                         <svg width="12" height="12">
-                                                            <use xlink:href="/sprite/icons.svg#icon-edit-close"></use>
+                                                            <use xlink:href="#icon-edit-close"></use>
                                                         </svg>
                                                     </button>
                                                 </div>
@@ -382,20 +452,20 @@
                                                 <div class="game__head">
                                                     <div class="game__exist-type">
                                                         <svg width="15" height="11">
-                                                            <use xlink:href="/sprite/icons.svg#icon-digital"></use>
+                                                            <use xlink:href="#icon-digital"></use>
                                                         </svg>
                                                     </div>
                                                     <span>Metroid</span>
                                                     <button class="game__edit-btn" aria-label="Редактировать">
                                                         <svg width="12" height="12">
-                                                            <use xlink:href="/sprite/icons.svg#icon-edit-close"></use>
+                                                            <use xlink:href="#icon-edit-close"></use>
                                                         </svg>
                                                     </button>
                                                 </div>
                                             </div>
                                             <button type="button" class="column__add-game" title="Добавить игру">
                                                 <svg width="15" height="15">
-                                                    <use xlink:href="/sprite/icons.svg#icon-add-game"></use>
+                                                    <use xlink:href="#icon-add-game"></use>
                                                 </svg>
                                             </button>
                                         </div>
@@ -409,13 +479,13 @@
                                             <div class="column__count-wrapper">
                                                 <div class="column__count">
                                                     <svg width="15" height="11">
-                                                        <use xlink:href="/sprite/icons.svg#icon-digital"></use>
+                                                        <use xlink:href="#icon-digital"></use>
                                                     </svg>
                                                     <span>34</span>
                                                 </div>
                                                 <div class="column__count">
                                                     <svg width="12" height="12">
-                                                        <use xlink:href="/sprite/icons.svg#icon-physic"></use>
+                                                        <use xlink:href="#icon-physic"></use>
                                                     </svg>
                                                     <span>45</span>
                                                 </div>
@@ -427,14 +497,14 @@
                                                     <div class="game__title">
                                                         <div class="game__exist-type">
                                                             <svg width="15" height="11">
-                                                                <use xlink:href="/sprite/icons.svg#icon-digital"></use>
+                                                                <use xlink:href="#icon-digital"></use>
                                                             </svg>
                                                         </div>
                                                         <span>Zelda</span>
                                                     </div>
                                                     <button class="game__edit-btn" aria-label="Редактировать">
                                                         <svg width="16" height="13">
-                                                            <use xlink:href="/sprite/icons.svg#icon-edit-game"></use>
+                                                            <use xlink:href="#icon-edit-game"></use>
                                                         </svg>
                                                     </button>
                                                 </div>
@@ -445,14 +515,14 @@
                                                     <div class="game__title">
                                                         <div class="game__exist-type">
                                                             <svg width="12" height="12">
-                                                                <use xlink:href="/sprite/icons.svg#icon-physic"></use>
+                                                                <use xlink:href="#icon-physic"></use>
                                                             </svg>
                                                         </div>
                                                         <span>Zelda</span>
                                                     </div>
                                                     <button class="game__edit-btn" aria-label="Редактировать">
                                                         <svg width="12" height="12">
-                                                            <use xlink:href="/sprite/icons.svg#icon-edit-close"></use>
+                                                            <use xlink:href="#icon-edit-close"></use>
                                                         </svg>
                                                     </button>
                                                 </div>
@@ -462,20 +532,20 @@
                                                 <div class="game__head">
                                                     <div class="game__exist-type">
                                                         <svg width="15" height="11">
-                                                            <use xlink:href="/sprite/icons.svg#icon-digital"></use>
+                                                            <use xlink:href="#icon-digital"></use>
                                                         </svg>
                                                     </div>
                                                     <span>Metroid</span>
                                                     <button class="game__edit-btn" aria-label="Редактировать">
                                                         <svg width="12" height="12">
-                                                            <use xlink:href="/sprite/icons.svg#icon-edit-close"></use>
+                                                            <use xlink:href="#icon-edit-close"></use>
                                                         </svg>
                                                     </button>
                                                 </div>
                                             </div>
                                             <button type="button" class="column__add-game" title="Добавить игру">
                                                 <svg width="15" height="15">
-                                                    <use xlink:href="/sprite/icons.svg#icon-add-game"></use>
+                                                    <use xlink:href="#icon-add-game"></use>
                                                 </svg>
                                             </button>
                                         </div>
@@ -489,13 +559,13 @@
                                             <div class="column__count-wrapper">
                                                 <div class="column__count">
                                                     <svg width="15" height="11">
-                                                        <use xlink:href="/sprite/icons.svg#icon-digital"></use>
+                                                        <use xlink:href="#icon-digital"></use>
                                                     </svg>
                                                     <span>34</span>
                                                 </div>
                                                 <div class="column__count">
                                                     <svg width="12" height="12">
-                                                        <use xlink:href="/sprite/icons.svg#icon-physic"></use>
+                                                        <use xlink:href="#icon-physic"></use>
                                                     </svg>
                                                     <span>45</span>
                                                 </div>
@@ -507,14 +577,14 @@
                                                     <div class="game__title">
                                                         <div class="game__exist-type">
                                                             <svg width="15" height="11">
-                                                                <use xlink:href="/sprite/icons.svg#icon-digital"></use>
+                                                                <use xlink:href="#icon-digital"></use>
                                                             </svg>
                                                         </div>
                                                         <span>Zelda</span>
                                                     </div>
                                                     <button class="game__edit-btn" aria-label="Редактировать">
                                                         <svg width="16" height="13">
-                                                            <use xlink:href="/sprite/icons.svg#icon-edit-game"></use>
+                                                            <use xlink:href="#icon-edit-game"></use>
                                                         </svg>
                                                     </button>
                                                 </div>
@@ -525,14 +595,14 @@
                                                     <div class="game__title">
                                                         <div class="game__exist-type">
                                                             <svg width="12" height="12">
-                                                                <use xlink:href="/sprite/icons.svg#icon-physic"></use>
+                                                                <use xlink:href="#icon-physic"></use>
                                                             </svg>
                                                         </div>
                                                         <span>Zelda</span>
                                                     </div>
                                                     <button class="game__edit-btn" aria-label="Редактировать">
                                                         <svg width="12" height="12">
-                                                            <use xlink:href="/sprite/icons.svg#icon-edit-close"></use>
+                                                            <use xlink:href="#icon-edit-close"></use>
                                                         </svg>
                                                     </button>
                                                 </div>
@@ -542,20 +612,20 @@
                                                 <div class="game__head">
                                                     <div class="game__exist-type">
                                                         <svg width="15" height="11">
-                                                            <use xlink:href="/sprite/icons.svg#icon-digital"></use>
+                                                            <use xlink:href="#icon-digital"></use>
                                                         </svg>
                                                     </div>
                                                     <span>Metroid</span>
                                                     <button class="game__edit-btn" aria-label="Редактировать">
                                                         <svg width="12" height="12">
-                                                            <use xlink:href="/sprite/icons.svg#icon-edit-close"></use>
+                                                            <use xlink:href="#icon-edit-close"></use>
                                                         </svg>
                                                     </button>
                                                 </div>
                                             </div>
                                             <button type="button" class="column__add-game" title="Добавить игру">
                                                 <svg width="15" height="15">
-                                                    <use xlink:href="/sprite/icons.svg#icon-add-game"></use>
+                                                    <use xlink:href="#icon-add-game"></use>
                                                 </svg>
                                             </button>
                                         </div>
@@ -576,6 +646,52 @@
 
             </main>
             <footer class="footer-rgl"></footer>
+
+            {{-- <div class="modal">
+                <div class="modal__container">
+                    <div class="remove">
+                        <div class="remove__title">
+                            Если удалить консоль, то все игры на ней потеряются, но их можно перенести на другие консоли
+                        </div>
+                        <div class="remove__list">
+                            <label class="remove__item">
+                                <input type="radio" class="remove__radio visually-hidden" name="remove-radio" value="Nintendo Switch" checked>
+                                <span class="remove__text">
+                                    Nintendo Switch
+                                </span>
+                            </label>
+                            <label class="remove__item">
+                                <input type="radio" class="remove__radio visually-hidden" name="remove-radio" value="PS4">
+                                <span class="remove__text">
+                                    PS4
+                                </span>
+                            </label>
+                            <label class="remove__item">
+                                <input type="radio" class="remove__radio visually-hidden" name="remove-radio" value="delete">
+                                <span class="remove__text">
+                                    Удалить вместе с играми
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="rename">
+                        <div class="rename__title">
+                            <label for="rename-modal">Переименовать:</label>
+                        </div>
+                        <div class="rename__input-wrapper">
+                            <input class="rename__input" type="text" id="rename-modal" value="Done">
+                        </div>
+                    </div>
+                    <div class="modal__confirm">
+                        <button type="button" class="modal__btn gb-btn">
+                            ОК
+                        </button>
+                        <button type="button" class="modal__btn gb-btn">
+                            Отмена
+                        </button>
+                    </div>
+                </div>
+            </div> --}}
         </div>
         <script src="{{mix('/js/demo.js')}}"></script>
     </body>

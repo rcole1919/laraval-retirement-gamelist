@@ -19,6 +19,8 @@
     &__title {
         display: flex;
         line-height: normal;
+        max-width: calc(100% - 16px);
+        overflow-x: hidden;
     }
 
     &__exist-type {

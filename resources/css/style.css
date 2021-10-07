@@ -13,6 +13,7 @@
 	--gb3: #808080;
 	--gb4: #000000;
     --fac: 'AnotherCastle3', sans-serif;
+    --fr: 'Roboto', sans-serif;
 }
 
 html {
@@ -51,3 +52,7 @@ body {
 @import './gamelist/column';
 @import './gamelist/game';
 @import './gamelist/game-edit';
+@import './gamelist/mode-view';
+@import './gamelist/modal';
+@import './gamelist/remove';
+@import './gamelist/rename';
