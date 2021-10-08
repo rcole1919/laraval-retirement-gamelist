@@ -1,4 +1,4 @@
-.mode-view {
+.tools {
     margin-bottom: 20px;
     display: flex;
 
@@ -8,14 +8,18 @@
         border: none;
         display: flex;
         background-color: transparent;
-        color: var(--gb2);
+        color: var(--gb3);
 
         &:hover {
-            color: var(--gb3);
+            color: var(--gb4);
         }
 
         &:active {
-            color: var(--gb4);
+            color: var(--gb3);
+        }
+
+        &:disabled {
+            color: var(--gb2);
         }
     }
 }

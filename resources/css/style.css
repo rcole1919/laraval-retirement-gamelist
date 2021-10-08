@@ -52,7 +52,8 @@ body {
 @import './gamelist/column';
 @import './gamelist/game';
 @import './gamelist/game-edit';
-@import './gamelist/mode-view';
+@import './gamelist/tools';
 @import './gamelist/modal';
 @import './gamelist/remove';
 @import './gamelist/rename';
+@import './gamelist/table';

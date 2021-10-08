@@ -132,19 +132,24 @@
 
                 <div class="platform">
                     <div class="container">
-                        <div class="mode-view">
-                            <button type="button" class="mode-view__button" title="Режим списка по консолям">
+                        <div class="tools">
+                            <button type="button" class="tools__button" title="Режим списка по категориям">
                                 <svg width="18" height="18">
                                     <use xlink:href="#icon-mode-rg"></use>
                                 </svg>
                             </button>
-                            <button type="button" class="mode-view__button" title="Режим сводной таблицы">
+                            <button type="button" class="tools__button" title="Режим сводной таблицы">
                                 <svg width="18" height="18">
                                     <use xlink:href="#icon-mode-table"></use>
                                 </svg>
                             </button>
+                            <button type="button" class="tools__button" title="Настроить таблицы">
+                                <svg width="18" height="18">
+                                    <use xlink:href="#icon-settings"></use>
+                                </svg>
+                            </button>
                         </div>
-                        <div class="platform__list">
+                        {{-- <div class="platform__list">
                             <article class="platform__item">
                                 <div class="platform__head" tabindex="0">
                                     <h2 class="platform__title platform__title--open">
@@ -640,6 +645,70 @@
                                     </h2>
                                 </div>
                             </article>
+                        </div> --}}
+                        <div class="table">
+                            <div class="table__wrapper">
+                                <table class="table__content">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="table__th">
+                                                    Название
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div tabindex="0" class="table__th table__th--sortable">
+                                                    Тип
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div tabindex="0" data-sort="asc" class="table__th table__th--sortable">
+                                                    Платформа
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div tabindex="0" data-sort="desc" class="table__th table__th--sortable">
+                                                    Статус
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                Zelda
+                                            </td>
+                                            <td class="table__exist-type">
+                                                <svg width="14" height="14">
+                                                    <use xlink:href="#icon-physic"></use>
+                                                </svg>
+                                            </td>
+                                            <td>
+                                                Nintendo Switch
+                                            </td>
+                                            <td>
+                                                Done
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Metroid
+                                            </td>
+                                            <td class="table__exist-type">
+                                                <svg width="14" height="14">
+                                                    <use xlink:href="#icon-digital"></use>
+                                                </svg>
+                                            </td>
+                                            <td>
+                                                Nintendo Switch
+                                            </td>
+                                            <td>
+                                                Not Begin
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
