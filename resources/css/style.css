@@ -57,3 +57,5 @@ body {
 @import './gamelist/remove';
 @import './gamelist/rename';
 @import './gamelist/table';
+@import './gamelist/modal-radio';
+@import './gamelist/add-game';

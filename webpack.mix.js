@@ -20,7 +20,8 @@ if ( ! mix.inProduction()) {
 mix
     // .copyDirectory('resources/fonts', 'public/fonts')
     // .copyDirectory('resources/images', 'public/images')
-    .js('resources/js/demo.js', 'public/js')
+    // .js('resources/js/demo.js', 'public/js')
+    .ts('resources/js/demo.tsx', 'public/js')
     .postCss('resources/css/style.css', 'public/css', [
         require('postcss-custom-properties'),
         require('autoprefixer'),

@@ -1385,6 +1385,15 @@
         color: var(--gb2);
     }
 
+    .column__add-game:hover {
+            background-color: var(--gb2);
+            color: var(--gb1);
+        }
+
+    .column__add-game:active {
+            background-color: var(--gb3);
+        }
+
 .game {
     margin-bottom: 15px;
 }
@@ -1689,48 +1698,6 @@
         font-weight: 500;
     }
 
-    .remove__list {
-        margin-bottom: 20px;
-    }
-
-    .remove__item {
-        display: block;
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-
-    .remove__text {
-        position: relative;
-        display: block;
-        padding-left: 30px;
-    }
-
-    .remove__text::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            border: 2px solid var(--gb2);
-        }
-
-    .remove__radio:checked + span::after {
-        content: "";
-        position: absolute;
-        top: 4px;
-        left: 4px;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: var(--gb3);
-    }
-
-    .remove__radio:focus-visible + span::before {
-        outline: auto;
-    }
-
 .rename {
     width: 350px;
 }
@@ -1850,6 +1817,64 @@
 
     .table__exist-type {
         text-align: center;
+    }
+
+.modal-radio {
+    margin-bottom: 20px;
+}
+
+    .modal-radio__title {
+        margin-bottom: 5px;
+        font-weight: 500;
+    }
+
+    .modal-radio__item {
+        display: block;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .modal-radio__text {
+        position: relative;
+        display: block;
+        padding-left: 30px;
+    }
+
+    .modal-radio__text::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 2px solid var(--gb2);
+        }
+
+    .modal-radio__radio:checked + span::after {
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: var(--gb3);
+    }
+
+    .modal-radio__radio:focus-visible + span::before {
+        outline: auto;
+    }
+
+.add-game {
+    max-width: 350px;
+}
+
+    .add-game__title {
+        margin-bottom: 20px;
+        font-family: var(--fac);
+        font-size: 28px;
+        text-align: center
     }
 
 @font-face {

@@ -1,0 +1,10 @@
+.add-game {
+    max-width: 350px;
+
+    &__title {
+        margin-bottom: 20px;
+        font-family: var(--fac);
+        font-size: 28px;
+        text-align: center
+    }
+}

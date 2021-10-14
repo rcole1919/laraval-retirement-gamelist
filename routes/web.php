@@ -24,3 +24,21 @@ Route::get('/gamelist-simple', function () {
 Route::get('/demo', function () {
     return view('gamelist');
 });
+
+// TODO: Роуты чисто для верстки, чтобы брать из нее компоненты, в последствии роуты нужно удалить
+
+Route::get('/markup-1', function () {
+    return view('markup.demo');
+});
+Route::get('/markup-2', function () {
+    return view('markup.settings');
+});
+Route::get('/markup-3', function () {
+    return view('markup.settings-with-popup');
+});
+Route::get('/markup-4', function () {
+    return view('markup.list-mode');
+});
+Route::get('/markup-5', function () {
+    return view('markup.table-mode');
+});
