@@ -1,16 +1,16 @@
 .header-rgl {
-    background-color: var(--gb4);
+	background-color: var(--gb4);
 
-    &__wrapper {
-        padding-top: 12px;
-        padding-bottom: 12px;
-        display: flex;
-    }
+	&__wrapper {
+		padding-top: 12px;
+		padding-bottom: 12px;
+		display: flex;
+	}
 
-    &__avatar {
-        margin-left: auto;
-        display: flex;
-        border-radius: 50%;
-        background-color: var(--gb1);
-    }
+	&__avatar {
+		margin-left: auto;
+		display: flex;
+		border-radius: 50%;
+		background-color: var(--gb1);
+	}
 }

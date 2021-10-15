@@ -1,0 +1,92 @@
+import {Info} from './type';
+
+export const mockList: Info = {
+	platforms: ['PS4', 'Nintendo Switch', 'PS3'],
+	categories: ['Пройдено', 'В процессе', 'Не начато'],
+	games: [
+		{
+			id: 1,
+			name: 'Metroid Dread',
+			platform: 'Nintendo Switch',
+			mediaType: 'physic',
+			category: 'В процессе',
+		},
+		{
+			id: 2,
+			name: 'Zelda: Breath of the Wild',
+			platform: 'Nintendo Switch',
+			mediaType: 'physic',
+			category: 'Пройдено',
+		},
+		{
+			id: 3,
+			name: 'Bayonetta',
+			platform: 'Nintendo Switch',
+			mediaType: 'digital',
+			category: 'Не начато',
+		},
+		{
+			id: 4,
+			name: 'Mario Kart 8',
+			platform: 'Nintendo Switch',
+			mediaType: 'physic',
+			category: 'В процессе',
+		},
+		{
+			id: 5,
+			name: 'Pikmin 3',
+			platform: 'Nintendo Switch',
+			mediaType: 'digital',
+			category: 'В процессе',
+		},
+		{
+			id: 6,
+			name: 'Ys IX',
+			platform: 'Nintendo Switch',
+			mediaType: 'physic',
+			category: 'Пройдено',
+		},
+		{
+			id: 7,
+			name: 'Dark Souls',
+			platform: 'Nintendo Switch',
+			mediaType: 'digital',
+			category: 'В процессе',
+		},
+		{
+			id: 8,
+			name: 'Super Mario Odissey',
+			platform: 'Nintendo Switch',
+			mediaType: 'digital',
+			category: 'Не начато',
+		},
+		{
+			id: 9,
+			name: 'Nier Automata',
+			platform: 'PS4',
+			mediaType: 'physic',
+			category: 'В процессе',
+		},
+		{
+			id: 10,
+			name: 'Bloodborne',
+			platform: 'PS4',
+			mediaType: 'physic',
+			category: 'Пройдено',
+		},
+		{
+			id: 11,
+			name: 'Metal Gear Solid 4',
+			platform: 'PS3',
+			mediaType: 'physic',
+			category: 'В процессе',
+		},
+		{
+			id: 12,
+			name: 'Hard Corps Uprising',
+			platform: 'PS3',
+			mediaType: 'digital',
+			category: 'В процессе',
+		},
+	],
+};

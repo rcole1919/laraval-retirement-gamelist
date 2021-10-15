@@ -1,109 +1,108 @@
 .table {
+	&__wrapper {
+		overflow-x: auto;
+		display: flex;
+	}
 
-    &__wrapper {
-        overflow-x: auto;
-        display: flex;
-    }
+	&__content {
+		min-width: 100%;
+		border-collapse: collapse;
+		border-bottom: 4px solid var(--gb3);
 
-    &__content {
-        min-width: 100%;
-        border-collapse: collapse;
-        border-bottom: 4px solid var(--gb3);
+		@media (min-width: 576px) {
+			min-width: auto;
+		}
+	}
 
-        @media (min-width: 576px) {
-            min-width: auto;
-        }
-    }
+	thead {
+		background-color: var(--gb4);
+		color: var(--gb1);
+		text-align: left;
+	}
 
-    thead {
-        background-color: var(--gb4);
-        color: var(--gb1);
-        text-align: left;
-    }
+	th {
+		border-right: 2px solid var(--gb4);
+		border-left: 2px solid var(--gb4);
+		font-weight: 400;
+	}
 
-    th {
-        border-right: 2px solid var(--gb4);
-        border-left: 2px solid var(--gb4);
-        font-weight: 400;
-    }
+	td {
+		padding: 7px;
+		border-right: 2px solid var(--gb2);
+		border-left: 2px solid var(--gb2);
+	}
 
-    td {
-        padding: 7px;
-        border-right: 2px solid var(--gb2);
-        border-left: 2px solid var(--gb2);
-    }
+	&__th {
+		padding: 7px;
+	}
 
-    &__th {
-        padding: 7px;
-    }
+	&__th--sortable {
+		position: relative;
+		padding-left: 22px;
+		cursor: pointer;
 
-    &__th--sortable {
-        position: relative;
-        padding-left: 22px;
-        cursor: pointer;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 9px;
+			left: 7px;
+			border-bottom: 4px solid var(--gb1);
+			border-left: 4px solid transparent;
+			border-right: 4px solid transparent;
+		}
 
-        &::before {
-            content: "";
-            position: absolute;
-            top: 9px;
-            left: 7px;
-            border-bottom: 4px solid var(--gb1);
-            border-left: 4px solid transparent;
-            border-right: 4px solid transparent;
-        }
+		&::after {
+			content: "";
+			position: absolute;
+			left: 7px;
+			bottom: 10px;
+			border-top: 4px solid var(--gb1);
+			border-left: 4px solid transparent;
+			border-right: 4px solid transparent;
+		}
 
-        &::after {
-            content: "";
-            position: absolute;
-            left: 7px;
-            bottom: 10px;
-            border-top: 4px solid var(--gb1);
-            border-left: 4px solid transparent;
-            border-right: 4px solid transparent;
-        }
+		&[data-sort="asc"] {
+			&::before {
+				top: 13px;
+			}
 
-        &[data-sort=asc] {
-            &::before {
-                top: 13px;
-            }
+			&::after {
+				display: none;
+			}
+		}
 
-            &::after {
-                display: none;
-            }
-        }
+		&[data-sort="desc"] {
+			&::before {
+				display: none;
+			}
 
-        &[data-sort=desc] {
-            &::before {
-                display: none;
-            }
+			&::after {
+				bottom: 15px;
+			}
+		}
 
-            &::after {
-                bottom: 15px;
-            }
-        }
+		&:hover {
+			&::before {
+				border-bottom: 4px solid var(--gb2);
+			}
 
-        &:hover {
-            &::before {
-                border-bottom: 4px solid var(--gb2);
-            }
+			&::after {
+				border-top: 4px solid var(--gb2);
+			}
+		}
 
-            &::after {
-                border-top: 4px solid var(--gb2);
-            }
-        }
+		&:active {
+			&::before {
+				border-bottom: 4px solid var(--gb3);
+			}
 
-        &:active {
-            &::before {
-                border-bottom: 4px solid var(--gb3);
-            }
+			&::after {
+				border-top: 4px solid var(--gb3);
+			}
+		}
+	}
 
-            &::after {
-                border-top: 4px solid var(--gb3);
-            }
-        }
-    }
-
-    &__exist-type {
-        text-align: center;
-    }
+	&__exist-type {
+		text-align: center;
+	}
 }

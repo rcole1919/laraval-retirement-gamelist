@@ -1,18 +1,18 @@
 .rename {
-    width: 350px;
+	width: 350px;
 
-    &__title {
-        margin-bottom: 15px;
-        font-weight: 500;
-    }
+	&__title {
+		margin-bottom: 15px;
+		font-weight: 500;
+	}
 
-    &__input-wrapper {
-        margin-bottom: 15px;
-    }
+	&__input-wrapper {
+		margin-bottom: 15px;
+	}
 
-    &__input {
-        width: 100%;
-        padding: 5px;
-        border: 4px solid var(--gb4);
-    }
+	&__input {
+		width: 100%;
+		padding: 5px;
+		border: 4px solid var(--gb4);
+	}
 }

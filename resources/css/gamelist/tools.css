@@ -1,25 +1,25 @@
 .tools {
-    margin-bottom: 20px;
-    display: flex;
+	margin-bottom: 20px;
+	display: flex;
 
-    &__button {
-        padding: 0;
-        margin-right: 16px;
-        border: none;
-        display: flex;
-        background-color: transparent;
-        color: var(--gb3);
+	&__button {
+		padding: 0;
+		margin-right: 16px;
+		border: none;
+		display: flex;
+		background-color: transparent;
+		color: var(--gb3);
 
-        &:hover {
-            color: var(--gb4);
-        }
+		&:hover {
+			color: var(--gb4);
+		}
 
-        &:active {
-            color: var(--gb3);
-        }
+		&:active {
+			color: var(--gb3);
+		}
 
-        &:disabled {
-            color: var(--gb2);
-        }
-    }
+		&:disabled {
+			color: var(--gb2);
+		}
+	}
 }

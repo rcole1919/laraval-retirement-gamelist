@@ -21,9 +21,8 @@ Route::get('/gamelist-simple', function () {
     return view('gamelist-simple');
 });
 
-Route::get('/demo', function () {
-    return view('gamelist');
-});
+// Route::get('/{name}', 'GamelistController@demo')->middleware('demo');
+Route::get('/{name}', 'GamelistController@demo')->where('name', 'demo|settings|list|table');
 
 // TODO: Роуты чисто для верстки, чтобы брать из нее компоненты, в последствии роуты нужно удалить
 

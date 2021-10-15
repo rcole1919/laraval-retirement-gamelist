@@ -1,5 +1,5 @@
 .gl-body {
-	font-family: 'AnotherCastle3', 'Arial', sans-serif;
+	font-family: "AnotherCastle3", "Arial", sans-serif;
 	display: flex;
 	flex-direction: column;
 }
@@ -11,7 +11,7 @@
 }
 
 .gl-old {
-    tfoot {
-        text-align: center;
-    }
+	tfoot {
+		text-align: center;
+	}
 }

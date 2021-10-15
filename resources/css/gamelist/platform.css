@@ -1,39 +1,39 @@
 .platform {
-    &__item {
-        margin-bottom: 50px;
-    }
+	&__item {
+		margin-bottom: 50px;
+	}
 
-    &__head {
-        background-color: var(--gb4);
-    }
+	&__head {
+		background-color: var(--gb4);
+	}
 
-    &__title {
-        position: relative;
-        padding-left: 15px;
-        padding-right: 40px;
-        padding-top: 12px;
-        padding-bottom: 12px;
-        margin: 0;
-        color: var(--gb1);
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 100%;
+	&__title {
+		position: relative;
+		padding-left: 15px;
+		padding-right: 40px;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		margin: 0;
+		color: var(--gb1);
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 100%;
 
-        &::after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            right: 12px;
-            transform: translateY(-50%);
-            border-top: 8px solid var(--gb1);
-            border-left: 8px solid transparent;
-            border-right: 8px solid transparent;
-        }
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 12px;
+			transform: translateY(-50%);
+			border-top: 8px solid var(--gb1);
+			border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+		}
 
-        &--open {
-            &::after {
-                transform: translateY(-50%) rotate(180deg);
-            }
-        }
-    }
+		&--open {
+			&::after {
+				transform: translateY(-50%) rotate(180deg);
+			}
+		}
+	}
 }

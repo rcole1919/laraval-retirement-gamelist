@@ -1,5 +1,5 @@
 @font-face {
-	font-family: 'AnotherCastle3';
+	font-family: "AnotherCastle3";
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap;
@@ -8,25 +8,27 @@
 }
 
 :root {
-	--gb1: #FFFFFF;
-	--gb2: #C0C0C0;
+	--gb1: #ffffff;
+	--gb2: #c0c0c0;
 	--gb3: #808080;
 	--gb4: #000000;
-    --fac: 'AnotherCastle3', sans-serif;
-    --fr: 'Roboto', sans-serif;
+	--fac: "AnotherCastle3", sans-serif;
+	--fr: "Roboto", sans-serif;
 }
 
 html {
 	box-sizing: border-box;
 }
 
-*, *::after, *::before {
-    box-sizing: inherit;
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
 }
 
 body {
 	min-height: 100vh;
-    min-width: 320px;
+	min-width: 320px;
 }
 
 .visually-hidden {
@@ -37,25 +39,25 @@ body {
 	margin: -1px;
 }
 
-@import './container';
-@import './default';
-@import './title-page/index';
-@import './title-page/castle';
-@import './title-page/auth-form';
-@import './gamelist-simple/gamelist';
+@import "./container";
+@import "./default";
+@import "./title-page/index";
+@import "./title-page/castle";
+@import "./title-page/auth-form";
+@import "./gamelist-simple/gamelist";
 
-@import './gamelist/header-rgl';
-@import './gamelist/main-rgl';
-@import './gamelist/demo';
-@import './gamelist/add';
-@import './gamelist/platform';
-@import './gamelist/column';
-@import './gamelist/game';
-@import './gamelist/game-edit';
-@import './gamelist/tools';
-@import './gamelist/modal';
-@import './gamelist/remove';
-@import './gamelist/rename';
-@import './gamelist/table';
-@import './gamelist/modal-radio';
-@import './gamelist/add-game';
+@import "./gamelist/header-rgl";
+@import "./gamelist/main-rgl";
+@import "./gamelist/demo";
+@import "./gamelist/add";
+@import "./gamelist/platform";
+@import "./gamelist/column";
+@import "./gamelist/game";
+@import "./gamelist/game-edit";
+@import "./gamelist/tools";
+@import "./gamelist/modal";
+@import "./gamelist/remove";
+@import "./gamelist/rename";
+@import "./gamelist/table";
+@import "./gamelist/modal-radio";
+@import "./gamelist/add-game";
