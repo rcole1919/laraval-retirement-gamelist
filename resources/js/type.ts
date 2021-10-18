@@ -27,3 +27,9 @@ export type Action = {
 	type: string,
 	payload?: any,
 }
+
+export type EditGame = {
+	id: number|string,
+	field: string,
+	value: string,
+}

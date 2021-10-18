@@ -3,8 +3,11 @@ import {Link} from 'react-router-dom';
 import Header from '../header/header';
 import Footer from '../footer/footer';
 import {AppRoute} from '../../const';
+import {connect} from 'react-redux';
+import {mockList} from '../../mock';
+import {ActionCreator} from '../../store/action';
 
-function Demo() {
+function Demo({onSetInfo, onBegin}) {
 	return (
 		<React.Fragment>
 			<Header />
@@ -26,10 +29,10 @@ function Demo() {
 							</p>
 						</div>
 						<div className="demo__start-wrapper">
-							<Link to={AppRoute.SETTINGS_DEMO} className="gb-btn demo__start" type="button">
+							<Link to={AppRoute.SETTINGS_DEMO} onClick={onBegin} className="gb-btn demo__start">
 								<span>Начать учитывать</span>
 							</Link>
-							<Link to={AppRoute.LIST_DEMO} className="gb-btn demo__start" type="button">
+							<Link to={AppRoute.LIST_DEMO} onClick={onSetInfo} className="gb-btn demo__start">
 								<span>Просто покажите уже этот ваш список игр!</span>
 							</Link>
 						</div>
@@ -41,4 +44,18 @@ function Demo() {
 	);
 }
 
-export default Demo;
+const mapDispatchToProps = (dispatch) => ({
+	onSetInfo() {
+		dispatch(ActionCreator.setInfo(mockList))
+	},
+	onBegin() {
+		dispatch(ActionCreator.setInfo({
+			platforms: [],
+			categories: [],
+			games: [],
+		}))
+	}
+})
+
+export {Demo};
+export default connect(null, mapDispatchToProps)(Demo);

@@ -1,8 +1,11 @@
 import React from 'react';
 import Header from '../header/header';
 import Footer from '../footer/footer';
+import { connect } from 'react-redux';
+import AddFormItem from '../add-form-item/add-form-item';
+import {AddTitle, AddType} from '../../const';
 
-function Settings() {
+function Settings({platforms, categories}) {
 	return (
 		<React.Fragment>
 			<Header />
@@ -11,76 +14,8 @@ function Settings() {
 				<div className="add">
 					<div className="container">
 						<div className="add__form">
-							<div className="add__item">
-								<div className="add__field-wrapper">
-									<label htmlFor="add-console" className="add__label">Добавить консоль</label>
-									<div className="add__input-wrapper">
-										<input type="text" id="add-console" className="add__input" />
-									</div>
-									<button type="button" className="add__button" />
-								</div>
-								<div className="add__added-wrapper">
-									<span className="add__added-title">
-										<span title="Переименовать" tabIndex={0} className="add__added-text">Not begin</span>
-										<button title="Удалить" className="add__added-delete" type="button">
-											<svg width={10} height={10}>
-												<use xlinkHref="#icon-edit-close" />
-											</svg>
-										</button>
-									</span>
-									<span className="add__added-title">
-										<span title="Переименовать" tabIndex={0} className="add__added-text">Not begin</span>
-										<button title="Удалить" className="add__added-delete" type="button">
-											<svg width={10} height={10}>
-												<use xlinkHref="#icon-edit-close" />
-											</svg>
-										</button>
-									</span>
-									<span className="add__added-title">
-										<span title="Переименовать" tabIndex={0} className="add__added-text">Not begin</span>
-										<button title="Удалить" className="add__added-delete" type="button">
-											<svg width={10} height={10}>
-												<use xlinkHref="#icon-edit-close" />
-											</svg>
-										</button>
-									</span>
-								</div>
-							</div>
-							<div className="add__item">
-								<div className="add__field-wrapper">
-									<label htmlFor="add-column" className="add__label">Добавить колонку</label>
-									<div className="add__input-wrapper">
-										<input type="text" id="add-column" className="add__input" />
-									</div>
-									<button type="button" className="add__button" />
-								</div>
-								<div className="add__added-wrapper">
-									<span className="add__added-title">
-										<span title="Переименовать" tabIndex={0} className="add__added-text">Not begin</span>
-										<button title="Удалить" className="add__added-delete" type="button">
-											<svg width={10} height={10}>
-												<use xlinkHref="#icon-edit-close" />
-											</svg>
-										</button>
-									</span>
-									<span className="add__added-title">
-										<span title="Переименовать" tabIndex={0} className="add__added-text">Not begin</span>
-										<button title="Удалить" className="add__added-delete" type="button">
-											<svg width={10} height={10}>
-												<use xlinkHref="#icon-edit-close" />
-											</svg>
-										</button>
-									</span>
-									<span className="add__added-title">
-										<span title="Переименовать" tabIndex={0} className="add__added-text">Not begin</span>
-										<button title="Удалить" className="add__added-delete" type="button">
-											<svg width={10} height={10}>
-												<use xlinkHref="#icon-edit-close" />
-											</svg>
-										</button>
-									</span>
-								</div>
-							</div>
+							<AddFormItem title={AddTitle.ADD_PLATFORM} column={platforms} type={AddType.PLATFORMS} />
+							<AddFormItem title={AddTitle.ADD_CATEGORY} column={categories} type={AddType.CATEGORIES} />
 							<button className="add__submit" type="button">Сформировать таблицы</button>
 						</div>
 					</div>
@@ -91,4 +26,10 @@ function Settings() {
 	)
 }
 
-export default Settings;
+const mapStateToProps = (state) => ({
+	platforms: state.platforms,
+	categories: state.categories,
+});
+
+export { Settings };
+export default connect(mapStateToProps)(Settings);
